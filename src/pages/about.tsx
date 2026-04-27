@@ -8,21 +8,29 @@ import {
 import { Button } from "@/components/ui/button";
 import aboutHeroBg from "@/assets/about-hero-bg.png";
 
+import servicesHeroBg from "@/assets/services-hero-bg.png";
+import vastConsultationImg from "@/assets/attached_assets/Vastu_Consultation.png";
+import astroVastuImg from "@/assets/attached_assets/Astro_Vastu.png";
+import astrologyConsultationImg from "@/assets/attached_assets/Astrology_Consultation.png";
+import landPlotAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
+import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
+import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
+
 const BRAND = {
-  phone: "+91 98765 43210",
-  whatsapp: "919876543210",
+  phone: "+91 9999999999",
+  whatsapp: "9999999999",
 };
 
 const FOUNDER_IMG =
-  "https://images.unsplash.com/photo-1604881991720-f91add269bed?crop=entropy&cs=srgb&fm=jpg&w=1000&q=85";
+  astrologyConsultationImg;
 const TEMPLE_IMG =
-  "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?crop=entropy&cs=srgb&fm=jpg&w=1200&q=85";
+  astrologyConsultationImg;
 const MANDALA_IMG =
-  "https://images.unsplash.com/photo-1507692049790-de58290a4334?crop=entropy&cs=srgb&fm=jpg&w=1200&q=85";
+  astroVastuImg;
 const MEDITATION_IMG =
-  "https://images.unsplash.com/photo-1545389336-cf090694435e?crop=entropy&cs=srgb&fm=jpg&w=1200&q=85";
+  vastConsultationImg;
 const LOTUS_IMG =
-  "https://images.unsplash.com/photo-1591291621164-2c6367723315?crop=entropy&cs=srgb&fm=jpg&w=1200&q=85";
+  auraChakraHealingImg;
 
 function AboutHero() {
   return (
