@@ -17,7 +17,7 @@ import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
 
 const BRAND = {
-  phone: "+91 9823391170",
+  phone: "+91 9923595755",
   whatsapp: "9823391170",
 };
 

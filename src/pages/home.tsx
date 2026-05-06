@@ -21,7 +21,7 @@ import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialCo
 export const BRAND = {
   name: "Shrisat Astro Vastu",
   tagline: "Astrology & Vastu Science",
-  phone: "+91 9823391170",
+  phone: "+91 9923595755",
   whatsapp: "9823391170",
   email: "shridhar@satecon.in ",
   address: "Pimpri-Chinchwad, Pune, Maharashtra",
@@ -184,7 +184,7 @@ export function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-xl border-b border-[#f0e6d2]">
       <div className="section-container flex items-center justify-between h-20">
         <Link href="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex items-center gap-2.5 group" data-testid="nav-logo">
-          <img src={logoImg} alt="Shrisat Astro Vastu logo" className="w-10 h-10 rounded-full object-contain" />
+          <img src={logoImg} alt="Shrisat Astro Vastu logo" className="w-20 h-20 rounded-full object-contain" />
           <div className="leading-tight">
             <div className="font-heading text-xl font-semibold tracking-tight text-[#1a1a1a]">{BRAND.name}</div>
             <div className="text-[10px] uppercase tracking-[0.25em] text-[#4a4a4a]">{BRAND.tagline}</div>

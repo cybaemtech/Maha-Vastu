@@ -15,8 +15,8 @@ import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
 
 const BRAND = {
-  name: "Maha Vastu",
-  phone: "+91 9823391170",
+  name: "Shrisat Astro Vastu",
+  phone: "+91 9923595755",
   whatsapp: "9823391170",
 };
 

@@ -8,10 +8,10 @@ import { Button } from "@/components/ui/button";
 import contactHeroBg from "@/assets/contact-hero-bg.png";
 
 const BRAND = {
-  name: "Maha Vastu",
-  phone: "+91 98765 43210",
-  phoneTel: "+919876543210",
-  whatsapp: "919876543210",
+  name: "Shrisat Astro Vastu",
+  phone: "+91 9923595755",
+  phoneTel: "+919923595755",
+  whatsapp: "919823391170",
   email: "shridhar@satecon.in ",
   address: "Pimpri-Chinchwad, Pune, Maharashtra 411018",
   mapsQuery: "Pimpri-Chinchwad, Pune",

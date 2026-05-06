@@ -8,9 +8,9 @@ import { Button } from "@/components/ui/button";
 import testiHeroBg from "@/assets/testi-hero-bg.png";
 
 const BRAND = {
-  phone: "+91 98765 43210",
-  phoneTel: "+919876543210",
-  whatsapp: "919876543210",
+  phone: "+91 9923595755",
+  phoneTel: "+919923595755",
+  whatsapp: "919823391170",
 };
 
 type Testimonial = {
