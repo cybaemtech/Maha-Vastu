@@ -16,8 +16,8 @@ import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialCo
 
 const BRAND = {
   name: "Maha Vastu",
-  phone: "+91 9999999999",
-  whatsapp: "9999999999",
+  phone: "+91 9823391170",
+  whatsapp: "9823391170",
 };
 
 type Service = {

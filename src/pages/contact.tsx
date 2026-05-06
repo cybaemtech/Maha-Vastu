@@ -12,7 +12,7 @@ const BRAND = {
   phone: "+91 98765 43210",
   phoneTel: "+919876543210",
   whatsapp: "919876543210",
-  email: "consult@mahavastu.example",
+  email: "shridhar@satecon.in ",
   address: "Pimpri-Chinchwad, Pune, Maharashtra 411018",
   mapsQuery: "Pimpri-Chinchwad, Pune",
   hours: "Mon–Sat · 10:00 am – 7:00 pm IST",

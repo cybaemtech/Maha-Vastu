@@ -8,7 +8,8 @@ import About from "@/pages/about";
 import Contact from "@/pages/contact";
 import Testimonials from "@/pages/testimonials";
 import NotFound from "@/pages/not-found";
-import { Nav, Footer, FloatingWhatsApp } from "@/pages/home";
+import { Nav, FloatingWhatsApp } from "@/pages/home";
+import { Footer } from "@/components/Footer";
 
 const queryClient = new QueryClient();
 

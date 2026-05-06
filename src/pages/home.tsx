@@ -6,6 +6,7 @@ import {
   Clock, FileText, ChevronRight, Menu, X, Quote, Award, Users, Building2, Briefcase,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/Footer";
 import homeHeroBg from "@/assets/home-hero-bg.png";
 import heroImg from "@/assets/attached_assets/image_1777017024028.png";
 import auraImg from "@/assets/attached_assets/AuraChakraHealing.png";
@@ -16,12 +17,12 @@ import landAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
 import auraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
 
-const BRAND = {
+export const BRAND = {
   name: "Maha Vastu",
   tagline: "Astrology & Vastu Science",
-  phone: "+91 9999999999",
-  whatsapp: "9999999999",
-  email: "consult@mahavastu.example",
+  phone: "+91 9823391170",
+  whatsapp: "9823391170",
+  email: "shridhar@satecon.in ",
   address: "Pimpri-Chinchwad, Pune, Maharashtra",
   mapsQuery: "Pimpri-Chinchwad, Pune",
 };
@@ -29,7 +30,7 @@ const BRAND = {
 const HERO_IMG = heroImg;
 const AURA_IMG = auraImg;
 
-const SERVICES = [
+export const SERVICES = [
   {
     id: "vastu",
     title: "Vastu Consulting",
@@ -170,8 +171,7 @@ export function Nav() {
   };
 
   const desktopLinkClass = (active: boolean) =>
-    `relative text-sm font-medium py-2 transition-colors ${
-      active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
+    `relative text-sm font-medium py-2 transition-colors ${active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
     }`;
 
   const ActiveUnderline = ({ show }: { show: boolean }) =>
@@ -215,11 +215,10 @@ export function Nav() {
             </Link>
 
             <div
-              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[340px] transition-all duration-150 ${
-                servicesOpen
-                  ? "opacity-100 translate-y-0 pointer-events-auto"
-                  : "opacity-0 -translate-y-1 pointer-events-none"
-              }`}
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[340px] transition-all duration-150 ${servicesOpen
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-1 pointer-events-none"
+                }`}
               onMouseEnter={openDropdown}
               onMouseLeave={scheduleClose}
             >
@@ -382,7 +381,7 @@ function HeroBackdrop() {
     { cx: 72, cy: 80, d: 2.1 },
     { cx: 50, cy: 10, d: 1.7 },
     { cx: 90, cy: 62, d: 0.3 },
-    { cx: 8,  cy: 52, d: 2.4 },
+    { cx: 8, cy: 52, d: 2.4 },
     { cx: 42, cy: 92, d: 1.0 },
   ];
   return (
@@ -523,7 +522,7 @@ function Hero() {
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-5 text-sm text-[#4a4a4a]">
             <div className="flex items-center gap-1">
-              {[0,1,2,3,4].map(i => <Star key={i} className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" />)}
+              {[0, 1, 2, 3, 4].map(i => <Star key={i} className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" />)}
               <span className="ml-1 font-medium text-[#1a1a1a]">4.9 / 5</span>
               <span>· Trusted by builders, professionals & families</span>
             </div>
@@ -741,7 +740,7 @@ function Testimonials() {
             <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">Real outcomes, in their own words.</h2>
           </div>
           <div className="flex items-center gap-1">
-            {[0,1,2,3,4].map(i => <Star key={i} className="w-5 h-5 fill-[#f6d46b] text-[#f6d46b]" />)}
+            {[0, 1, 2, 3, 4].map(i => <Star key={i} className="w-5 h-5 fill-[#f6d46b] text-[#f6d46b]" />)}
             <span className="ml-2 text-sm font-medium text-[#1a1a1a]">4.9 / 5 average</span>
           </div>
         </div>
@@ -750,12 +749,12 @@ function Testimonials() {
             <div key={i} className="bg-white border border-[#f0e6d2] rounded-2xl p-8 relative hover:shadow-md transition-shadow">
               <Quote className="absolute top-6 right-6 w-8 h-8 text-[#f6d46b]" />
               <div className="flex items-center gap-1 mb-4">
-                {[0,1,2,3,4].map(i => <Star key={i} className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" />)}
+                {[0, 1, 2, 3, 4].map(i => <Star key={i} className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" />)}
               </div>
               <p className="text-[#1a1a1a] text-lg leading-relaxed">"{t.quote}"</p>
               <div className="mt-6 pt-5 border-t border-[#f0e6d2] flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full mv-gradient flex items-center justify-center text-white font-heading font-semibold">
-                  {t.name.split(" ").map(s => s[0]).join("").slice(0,2)}
+                  {t.name.split(" ").map(s => s[0]).join("").slice(0, 2)}
                 </div>
                 <div>
                   <div className="font-heading text-base font-medium text-[#1a1a1a]">{t.name}</div>
@@ -826,8 +825,8 @@ function Contact() {
             </div>
           </div>
           <a href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`}
-             target="_blank" rel="noreferrer"
-             className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[#f0e6d2] hover:shadow-md transition-shadow" data-testid="contact-whatsapp-card">
+            target="_blank" rel="noreferrer"
+            className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[#f0e6d2] hover:shadow-md transition-shadow" data-testid="contact-whatsapp-card">
             <div className="w-11 h-11 rounded-full bg-[#25D366]/15 flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-[#25D366]" />
             </div>
@@ -878,22 +877,22 @@ function Contact() {
             <form onSubmit={submit} className="bg-white rounded-2xl border border-[#f0e6d2] p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-1">
                 <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">Your name</label>
-                <input value={form.name} onChange={e=>setForm({...form,name:e.target.value})}
+                <input value={form.name} onChange={e => setForm({ ...form, name: e.target.value })}
                   className="mt-2 w-full rounded-xl border border-[#f0e6d2] bg-[#faf9f6] px-4 h-11 outline-none focus:border-[#ef4d2b]" placeholder="Full name" />
               </div>
               <div className="md:col-span-1">
                 <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">Mobile</label>
-                <input value={form.phone} onChange={e=>setForm({...form,phone:e.target.value})}
+                <input value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })}
                   className="mt-2 w-full rounded-xl border border-[#f0e6d2] bg-[#faf9f6] px-4 h-11 outline-none focus:border-[#ef4d2b]" placeholder="+91 ..." />
               </div>
               <div className="md:col-span-1">
                 <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">Email</label>
-                <input value={form.email} onChange={e=>setForm({...form,email:e.target.value})} data-testid="lead-email-input"
+                <input value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} data-testid="lead-email-input"
                   className="mt-2 w-full rounded-xl border border-[#f0e6d2] bg-[#faf9f6] px-4 h-11 outline-none focus:border-[#ef4d2b]" placeholder="you@email.com" />
               </div>
               <div className="md:col-span-1">
                 <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">Service</label>
-                <select value={form.service} onChange={e=>setForm({...form,service:e.target.value})}
+                <select value={form.service} onChange={e => setForm({ ...form, service: e.target.value })}
                   className="mt-2 w-full rounded-xl border border-[#f0e6d2] bg-[#faf9f6] px-4 h-11 outline-none focus:border-[#ef4d2b]">
                   <option value="">Choose a service</option>
                   {SERVICES.map(s => <option key={s.title} value={s.title}>{s.title}</option>)}
@@ -901,7 +900,7 @@ function Contact() {
               </div>
               <div className="md:col-span-2">
                 <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">Tell us a little</label>
-                <textarea value={form.message} onChange={e=>setForm({...form,message:e.target.value})} rows={4}
+                <textarea value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} rows={4}
                   className="mt-2 w-full rounded-xl border border-[#f0e6d2] bg-[#faf9f6] px-4 py-3 outline-none focus:border-[#ef4d2b]"
                   placeholder="Briefly tell us what you're facing or what you'd like to understand..." />
               </div>
@@ -922,55 +921,7 @@ function Contact() {
   );
 }
 
-export function Footer() {
-  return (
-    <footer className="bg-[#faf9f6] border-t border-[#f0e6d2] mt-20">
-      <div className="section-container py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div className="md:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full mv-gradient flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <div className="font-heading text-xl font-semibold">{BRAND.name}</div>
-          </div>
-          <p className="mt-4 text-sm text-[#4a4a4a] leading-relaxed">
-            Scientific spiritual consulting. Practical remedies for your home, career, and energy — grounded in Vastu and Astrology.
-          </p>
-        </div>
-        <div>
-          <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold mb-4">Services</div>
-          <ul className="space-y-2 text-sm text-[#1a1a1a]">
-            {SERVICES.map(s => <li key={s.title}><a href="#services" className="hover:text-[#ef4d2b]">{s.title}</a></li>)}
-          </ul>
-        </div>
-        <div>
-          <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold mb-4">Practice</div>
-          <ul className="space-y-2 text-sm text-[#1a1a1a]">
-            <li><a href="#about" className="hover:text-[#ef4d2b]">About</a></li>
-            <li><a href="#how" className="hover:text-[#ef4d2b]">How it works</a></li>
-            <li><a href="#philosophy" className="hover:text-[#ef4d2b]">Philosophy</a></li>
-            <li><a href="#testimonials" className="hover:text-[#ef4d2b]">Testimonials</a></li>
-          </ul>
-        </div>
-        <div>
-          <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold mb-4">Reach us</div>
-          <ul className="space-y-3 text-sm text-[#1a1a1a]">
-            <li className="flex items-start gap-2"><Phone className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> {BRAND.phone}</li>
-            <li className="flex items-start gap-2"><Mail className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> <span className="break-all">{BRAND.email}</span></li>
-            <li className="flex items-start gap-2"><MapPin className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> {BRAND.address}</li>
-            <li className="flex items-start gap-2"><Clock className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> Mon–Sat · 10am to 7pm IST</li>
-          </ul>
-        </div>
-      </div>
-      <div className="border-t border-[#f0e6d2]">
-        <div className="section-container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#4a4a4a]">
-          <div>© {new Date().getFullYear()} {BRAND.name}. All rights reserved.</div>
-          <div>Crafted in Pimpri-Chinchwad · Serving 25+ cities</div>
-        </div>
-      </div>
-    </footer>
-  );
-}
+
 
 export function FloatingWhatsApp() {
   return (
