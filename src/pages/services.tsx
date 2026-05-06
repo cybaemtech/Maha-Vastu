@@ -638,6 +638,134 @@ function MiniTestimonial() {
   );
 }
 
+function VedicNumerologyDetail({ service, index }: { service: Service; index: number }) {
+  const whatsappUrl = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hi, I'd like a Free Birth Date Numerology Consultation. My birth date is:")}`;
+  return (
+    <section
+      id={service.id}
+      className={`scroll-mt-32 py-16 md:py-24 border-b border-[#f0e6d2] ${index % 2 === 1 ? "bg-white" : "bg-[#faf9f6]"}`}
+    >
+      <div className="section-container">
+
+        {/* ── Hero: image with title overlay ── */}
+        <div className="relative rounded-3xl overflow-hidden">
+          <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-[#f6d46b]/30 to-[#ef4d2b]/20 blur-2xl" />
+          <div className="relative aspect-[21/9] min-h-[280px]">
+            <img
+              src={service.image}
+              alt={service.title}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm border border-white/25 text-[10px] uppercase tracking-[0.22em] font-semibold text-[#f6d46b] mb-4">
+                <Hash className="w-3 h-3" /> Service {String(index + 1).padStart(2, "0")}
+              </div>
+              <h2 className="font-heading text-3xl md:text-5xl font-light tracking-tight text-white leading-[1.1]">
+                {service.title}
+              </h2>
+              <p className="mt-3 text-white/80 text-base md:text-lg max-w-3xl leading-relaxed">
+                {service.intro}
+              </p>
+              <div className="mt-2 text-sm text-white/60">For: {service.audience}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── Core Pillars + Sub Services side by side ── */}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+          {/* Core Pillars */}
+          {service.pillars && (
+            <div>
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-1 h-5 rounded-full mv-gradient" />
+                <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a]">Core Pillars</div>
+              </div>
+              <div className="flex flex-col gap-4">
+                {service.pillars.map((p, i) => (
+                  <div key={p.title} className="flex items-start gap-4 bg-white border border-[#f0e6d2] rounded-2xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                    <div className="w-10 h-10 rounded-full mv-gradient flex items-center justify-center flex-shrink-0 shadow-sm">
+                      <span className="text-white font-heading font-semibold text-sm">{i + 1}</span>
+                    </div>
+                    <div>
+                      <div className="font-heading text-base font-medium text-[#1a1a1a]">{p.title}</div>
+                      <div className="mt-1 text-sm text-[#4a4a4a]">{p.desc1}</div>
+                      <div className="text-sm text-[#ef4d2b] font-medium">{p.desc2}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Sub Services */}
+          {service.subServices && (
+            <div>
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-1 h-5 rounded-full mv-gradient" />
+                <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a]">Sub Services</div>
+              </div>
+              <div className="bg-white border border-[#f0e6d2] rounded-2xl p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {service.subServices.map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#fff5eb] flex items-center justify-center">
+                        <Check className="w-3 h-3 text-[#ef4d2b]" />
+                      </span>
+                      <span className="text-sm text-[#1a1a1a]">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ── Premium CTA block ── */}
+        <div className="mt-12 relative rounded-3xl overflow-hidden border border-[#f6d46b]">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#fff5eb] via-[#fffaf0] to-[#fdf6e3]" />
+          <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-[#f6d46b]/25 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#ef4d2b]/15 blur-3xl" />
+          <div className="relative p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#fff5eb] border border-[#f6d46b] text-[10px] uppercase tracking-[0.25em] font-semibold text-[#ef4d2b] mb-4">
+                <Sparkles className="w-3 h-3" /> Free Consultation
+              </div>
+              <h3 className="font-heading text-2xl md:text-3xl font-light tracking-tight text-[#1a1a1a]">
+                Get Your Free Birth Date Consultation{" "}
+                <span className="mv-gradient-text font-medium">in 5–10 Minutes</span>
+              </h3>
+              {service.valueProp && (
+                <p className="mt-3 text-[#4a4a4a] text-base leading-relaxed max-w-xl">{service.valueProp}</p>
+              )}
+              <p className="mt-2 text-sm text-[#4a4a4a] leading-relaxed">
+                Simply share your birth date with us on WhatsApp and receive instant guidance.
+              </p>
+            </div>
+            <div className="lg:col-span-4 flex flex-col gap-3">
+              <Button asChild className="rounded-full h-12 text-base bg-[#25d366] hover:bg-[#1fba59] text-white shadow-md">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" /> Start Free Consultation
+                </a>
+              </Button>
+              <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full h-12 text-base shadow-md">
+                <Link href="/#contact">{service.cta} <ArrowRight className="w-4 h-4 ml-2" /></Link>
+              </Button>
+              <Button asChild variant="outline" className="rounded-full h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+                <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" />{BRAND.phone}</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+
 export default function ServicesPage() {
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -667,9 +795,13 @@ export default function ServicesPage() {
       <ServicesHero />
       <ServicesQuickNav />
       <ServiceCardsGrid />
-      {SERVICES.map((s, i) => (
-        <ServiceDetail key={s.id} service={s} index={i} />
-      ))}
+      {SERVICES.map((s, i) =>
+        s.id === "numerology" ? (
+          <VedicNumerologyDetail key={s.id} service={s} index={i} />
+        ) : (
+          <ServiceDetail key={s.id} service={s} index={i} />
+        )
+      )}
       <ProcessSection />
       <MiniTestimonial />
       <ServicesCTA />
