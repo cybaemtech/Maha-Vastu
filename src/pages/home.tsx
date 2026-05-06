@@ -24,8 +24,8 @@ export const BRAND = {
   phone: "+91 9923595755",
   whatsapp: "9823391170",
   email: "shridhar@satecon.in ",
-  address: "Pimpri-Chinchwad, Pune, Maharashtra",
-  mapsQuery: "Pimpri-Chinchwad, Pune",
+  address: "Flat No. 01, Crystal Tower, Sector-29, Ravet, Near DMart, Pune, Maharashtra 411044",
+  mapsQuery: "Crystal Tower, Sector 29, Ravet, Pune, Maharashtra 411044",
 };
 
 const HERO_IMG = heroImg;

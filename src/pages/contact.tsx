@@ -13,8 +13,8 @@ const BRAND = {
   phoneTel: "+919923595755",
   whatsapp: "919823391170",
   email: "shridhar@satecon.in ",
-  address: "Pimpri-Chinchwad, Pune, Maharashtra 411018",
-  mapsQuery: "Pimpri-Chinchwad, Pune",
+  address: "Flat No. 01, Crystal Tower, Sector-29, Ravet, Near DMart, Pune, Maharashtra 411044",
+  mapsQuery: "Crystal Tower, Sector 29, Ravet, Pune, Maharashtra 411044",
   hours: "Mon–Sat · 10:00 am – 7:00 pm IST",
 };
 
@@ -207,7 +207,7 @@ function ChannelCards() {
     {
       icon: MapPin,
       label: "Studio",
-      title: "Pimpri-Chinchwad, Pune",
+      title: "Flat No. 01, Crystal Tower, Sector-29, Ravet, Pune",
       sub: "Visits by appointment only",
       href: `https://www.google.com/maps?q=${encodeURIComponent(BRAND.mapsQuery)}`,
       color: "#ef4d2b",
