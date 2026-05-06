@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import {
   Sparkles, ArrowRight, Check, ChevronRight, Compass, Sun, Mountain,
   HeartHandshake, Building2, Briefcase, Home as HomeIcon, Heart, Activity,
-  Phone, MessageCircle, Star, Award, ShieldCheck, Quote,
+  Phone, MessageCircle, Star, Award, ShieldCheck, Quote, Hash,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import servicesHeroBg from "@/assets/services-hero-bg.png";
@@ -13,6 +13,7 @@ import astrologyConsultationImg from "@/assets/attached_assets/Astrology_Consult
 import landPlotAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
 import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
+import vedicNumerologyImg from "@/assets/attached_assets/Vedic_Numerology.png";
 
 const BRAND = {
   name: "Shrisat Astro Vastu",
@@ -32,6 +33,9 @@ type Service = {
   groups?: { title: string; items: string[] }[];
   cta: string;
   flagship?: boolean;
+  pillars?: { title: string; desc1: string; desc2: string }[];
+  subServices?: string[];
+  valueProp?: string;
 };
 
 const SERVICES: Service[] = [
@@ -194,6 +198,56 @@ const SERVICES: Service[] = [
     ],
     cta: "Talk to a Consultant",
   },
+  {
+    id: "numerology",
+    title: "Vedic Numerology (Sankhya Shastra)",
+    tag: "Decode your life patterns through numbers and align with planetary energies",
+    intro:
+      "Harness the ancient science of Sankhya Shastra to decode the vibrational patterns hidden in your birth date and name. Align your numbers with cosmic energies to unlock growth in career, finance, relationships, and personal success.",
+    audience: "Individuals, professionals, entrepreneurs, business owners",
+    icon: Hash,
+    image: vedicNumerologyImg,
+    includes: [
+      "Moolank (Birth Number) analysis",
+      "Bhagyank (Destiny Number) reading",
+      "Naamank (Name Number) correction",
+      "Mobile Number Analysis",
+      "Business Name Numerology",
+      "Signature Correction",
+      "Nine Numbers & Their Meanings",
+      "Planetary Rulers & Number Influence",
+    ],
+    pillars: [
+      {
+        title: "Vedic Numerology",
+        desc1: "Traditional number-based life analysis",
+        desc2: "Based on birth date and name vibrations",
+      },
+      {
+        title: "KP System (Krishnamurti Paddhati)",
+        desc1: "Advanced predictive system",
+        desc2: "Accurate event timing",
+      },
+      {
+        title: "Bhrugu Nandi Nadi",
+        desc1: "Karmic pattern reading",
+        desc2: "Life path decoding",
+      },
+    ],
+    subServices: [
+      "Moolank (Birth Number)",
+      "Bhagyank (Destiny Number)",
+      "Naamank (Name Number)",
+      "Mobile Number Analysis",
+      "Business Name Numerology",
+      "Signature Correction",
+      "Nine Numbers & Their Meanings",
+      "Planetary Rulers & Number Influence",
+    ],
+    valueProp:
+      "Align your numbers with your life path to unlock growth in career, finance, relationships, and personal success.",
+    cta: "Get Your Free Birth Date Consultation",
+  },
 ];
 
 const PROCESS = [
@@ -322,7 +376,7 @@ function ServiceCardsGrid() {
     <section className="bg-[#faf9f6] border-b border-[#f0e6d2] py-16 md:py-20">
       <div className="section-container">
         <div className="text-center mb-12">
-          <div className="text-xs uppercase tracking-[0.25em] text-[#ef4d2b] font-semibold">Six pillars</div>
+          <div className="text-xs uppercase tracking-[0.25em] text-[#ef4d2b] font-semibold">Seven pillars</div>
           <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Choose a service to <span className="mv-gradient-text font-medium">begin</span>
           </h2>
@@ -434,6 +488,58 @@ function ServiceDetail({ service, index }: { service: Service; index: number }) 
                 </ul>
               </div>
             ))}
+
+            {service.pillars && (
+              <div className="mt-7">
+                <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a] mb-4">Core Pillars</div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {service.pillars.map((p) => (
+                    <div key={p.title} className="bg-white border border-[#f0e6d2] rounded-2xl p-5">
+                      <div className="w-9 h-9 rounded-full mv-gradient flex items-center justify-center mb-3">
+                        <Hash className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="font-heading text-base font-medium text-[#1a1a1a]">{p.title}</div>
+                      <div className="mt-2 text-sm text-[#4a4a4a] leading-relaxed">{p.desc1}</div>
+                      <div className="text-sm text-[#4a4a4a]">{p.desc2}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {service.subServices && (
+              <div className="mt-7">
+                <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a] mb-3">Sub Services</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2.5">
+                  {service.subServices.map((item) => (
+                    <div key={item} className="flex items-start gap-2.5 text-sm text-[#1a1a1a]">
+                      <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-[#fff5eb] flex items-center justify-center">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#ef4d2b]" />
+                      </span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {service.valueProp && (
+              <div className="mt-7 rounded-2xl bg-gradient-to-br from-[#fff5eb] to-[#fffaf0] border border-[#f6d46b] p-6">
+                <p className="text-base text-[#1a1a1a] font-medium leading-relaxed">{service.valueProp}</p>
+                <div className="mt-5 border-t border-[#f0e6d2] pt-5">
+                  <div className="font-heading text-lg font-medium text-[#1a1a1a]">Get Your Free Birth Date Consultation in 5–10 Minutes</div>
+                  <p className="mt-2 text-sm text-[#4a4a4a] leading-relaxed">
+                    Discover what your numbers reveal about your life, career, and relationships.
+                    Simply share your birth date with us on WhatsApp and receive instant guidance.
+                  </p>
+                  <Button asChild className="mt-4 rounded-full px-6 h-11 text-sm bg-[#25d366] hover:bg-[#1fba59] text-white shadow-md">
+                    <a href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hi, I'd like a Free Birth Date Numerology Consultation. My birth date is:")}`} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle className="w-4 h-4 mr-2" /> Start Your Free Consultation on WhatsApp
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            )}
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-6 h-11 text-sm shadow-md">

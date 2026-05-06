@@ -17,6 +17,7 @@ import astroVastuImg from "@/assets/attached_assets/Astro_Vastu.png";
 import landAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
 import auraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
+import vedicNumerologyImg from "@/assets/attached_assets/Vedic_Numerology.png";
 
 export const BRAND = {
   name: "Shrisat Astro Vastu",
@@ -80,6 +81,14 @@ export const SERVICES = [
     desc: "Vastu and astrology insights applied at organisational scale — for factories, retail outlets, residential complexes, and growing companies.",
     audience: "Builders, industrialists, real-estate businesses",
     image: businessIndustrialImg,
+  },
+  {
+    id: "numerology",
+    title: "Vedic Numerology",
+    tag: "Decode your life patterns through numbers",
+    desc: "Align your numbers with your life path to unlock growth in career, finance, relationships, and personal success.",
+    audience: "Individuals, professionals, entrepreneurs",
+    image: vedicNumerologyImg,
   },
 ];
 
