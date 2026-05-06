@@ -653,7 +653,7 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-6 h-11 text-sm shadow-md">
-                <Link href="/#contact">{service.cta} <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                <Link href="/contact">{service.cta} <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full px-6 h-11 text-sm border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10">
                 <a href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi, I'm interested in ${service.title}.`)}`} target="_blank" rel="noopener noreferrer">
@@ -736,13 +736,13 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
               </p>
             </div>
             <div className="lg:col-span-4 flex flex-col gap-3">
-              <Button asChild className="rounded-full h-12 text-base bg-[#25d366] hover:bg-[#1fba59] text-white shadow-md">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="w-4 h-4 mr-2" /> Start Free Consultation
-                </a>
-              </Button>
               <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full h-12 text-base shadow-md">
-                <Link href="/#contact">{service.cta} <ArrowRight className="w-4 h-4 ml-2" /></Link>
+                <Link href="/contact">Get Your Free Birth Date Consultation <ArrowRight className="w-4 h-4 ml-2" /></Link>
+              </Button>
+              <Button asChild variant="outline" className="rounded-full h-12 text-base border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp Consultation
+                </a>
               </Button>
               <Button asChild variant="outline" className="rounded-full h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
                 <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" />{BRAND.phone}</a>
