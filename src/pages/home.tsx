@@ -835,7 +835,7 @@ function Services() {
             What we do
           </div>
           <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
-            Six services, one integrated practice.
+            Seven services, one integrated practice.
           </h2>
         </div>
         <p className="text-[#4a4a4a] max-w-md leading-relaxed">
@@ -1311,14 +1311,6 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className="rounded-3xl overflow-hidden border border-[#f0e6d2] h-[280px]">
-            <iframe
-              title="Maha Vastu Location"
-              src={`https://www.google.com/maps?q=${encodeURIComponent(BRAND.mapsQuery)}&output=embed`}
-              className="w-full h-full"
-              loading="lazy"
-            />
-          </div>
         </div>
 
         <div>
@@ -1427,6 +1419,15 @@ function Contact() {
             </form>
           )}
         </div>
+      </div>
+
+      <div className="mt-12 rounded-3xl overflow-hidden border border-[#f0e6d2] h-[450px] shadow-md">
+        <iframe
+          title="Maha Vastu Location"
+          src={`https://www.google.com/maps?q=${encodeURIComponent(BRAND.mapsQuery)}&output=embed`}
+          className="w-full h-full"
+          loading="lazy"
+        />
       </div>
     </section>
   );
