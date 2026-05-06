@@ -1,8 +1,10 @@
-modules = ["nodejs-24"]
+modules = ["nodejs-20"]
 
 [deployment]
 router = "application"
 deploymentTarget = "autoscale"
+run = ["node", "./dist/index.cjs"]
+build = ["npm", "run", "build"]
 
 [deployment.postBuild]
 args = ["pnpm", "store", "prune"]
@@ -29,11 +31,11 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "PORT=18709 npm run dev"
-waitForPort = 18709
+args = "npm run dev"
+waitForPort = 5000
 
 [agent]
-stack = "PNPM_WORKSPACE"
+stack = "FULLSTACK_JS"
 expertMode = true
 
 [postMerge]
@@ -42,11 +44,7 @@ timeoutMs = 20000
 
 [[ports]]
 localPort = 5000
-externalPort = 5000
-
-[[ports]]
-localPort = 5173
-externalPort = 5173
+externalPort = 80
 
 [[ports]]
 localPort = 5174
@@ -67,3 +65,6 @@ externalPort = 3000
 [[ports]]
 localPort = 18709
 externalPort = 80
+
+[nix]
+channel = "stable-25_05"
