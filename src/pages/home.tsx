@@ -255,7 +255,7 @@ export function Nav() {
   };
 
   const desktopLinkClass = (active: boolean) =>
-    `relative text-sm font-medium py-2 transition-colors ${
+    `relative text-base font-bold py-2 transition-colors ${
       active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
     }`;
 
@@ -385,7 +385,7 @@ export function Nav() {
         <div className="hidden md:flex items-center gap-4">
           <a
             href={`tel:${BRAND.phone}`}
-            className="flex items-center gap-1.5 text-sm font-medium text-[#1a1a1a] hover:text-[#ef4d2b]"
+            className="flex items-center gap-1.5 text-base font-bold text-[#1a1a1a] hover:text-[#ef4d2b]"
             data-testid="nav-phone-link"
           >
             <Phone className="w-4 h-4 text-[#ef4d2b]" />
