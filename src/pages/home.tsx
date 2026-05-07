@@ -24,6 +24,7 @@ import {
   Users,
   Building2,
   Briefcase,
+  ChevronUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
@@ -255,8 +256,7 @@ export function Nav() {
   };
 
   const desktopLinkClass = (active: boolean) =>
-    `relative text-base font-bold py-2 transition-colors ${
-      active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
+    `relative text-base font-bold py-2 transition-colors ${active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
     }`;
 
   const ActiveUnderline = ({ show }: { show: boolean }) =>
@@ -316,11 +316,10 @@ export function Nav() {
             </Link>
 
             <div
-              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[340px] transition-all duration-150 ${
-                servicesOpen
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[340px] transition-all duration-150 ${servicesOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 -translate-y-1 pointer-events-none"
-              }`}
+                }`}
               onMouseEnter={openDropdown}
               onMouseLeave={scheduleClose}
             >
@@ -1434,17 +1433,37 @@ function Contact() {
 }
 
 export function FloatingWhatsApp() {
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <a
-      href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
-      target="_blank"
-      rel="noreferrer"
-      data-testid="floating-whatsapp-btn"
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg animate-mv-pulse hover:scale-105 transition-transform"
-      aria-label="Chat on WhatsApp"
-    >
-      <MessageCircle className="w-6 h-6" />
-    </a>
+    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3">
+      <a
+        href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
+        target="_blank"
+        rel="noreferrer"
+        data-testid="floating-whatsapp-btn"
+        className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-lg animate-mv-pulse hover:scale-105 transition-transform"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6" />
+      </a>
+
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        data-testid="scroll-to-top-btn"
+        aria-label="Scroll to top"
+        className={`w-11 h-11 rounded-full bg-[#c8a96e] text-white flex items-center justify-center shadow-md hover:bg-[#b8955a] hover:scale-105 transition-all duration-300 ${showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
+      >
+        <ChevronUp className="w-5 h-5" />
+      </button>
+    </div>
   );
 }
 

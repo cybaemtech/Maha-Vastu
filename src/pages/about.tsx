@@ -123,8 +123,8 @@ function AboutHero() {
             <Sparkles className="w-3.5 h-3.5" />
             About Shrisat Astro Vastu
           </div>
-          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-semibold tracking-tight text-[#ef4d2b] leading-[1.05]">
-            Our Guidance. Our Foundation.
+          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
+            Our Guidance. <span className="mv-gradient-text font-medium">Our Foundation.</span>
           </h1>
           <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
           <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-md">
