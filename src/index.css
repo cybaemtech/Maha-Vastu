@@ -354,6 +354,9 @@
   }
 }
 /* === Maha Vastu site-specific === */
+html {
+  font-size: 17.5px;
+}
 body {
   font-family: 'Cormorant Garamond', serif;
   color: #1a1a1a;
@@ -363,6 +366,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Cormorant Garamond', serif;
+  font-weight: 700 !important;
   letter-spacing: -0.01em;
 }
 .bg-sacred-geometry {
