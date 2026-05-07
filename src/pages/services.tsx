@@ -335,7 +335,7 @@ function ServicesHero() {
               <Link href="/#contact">Book a Consultation <ArrowRight className="w-4 h-4 ml-2" /></Link>
             </Button>
             <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
-              <a href={`tel:${BRAND.phone}`} className="flex items-center"><Phone className="w-4 h-4 mr-2" />{BRAND.phone}</a>
+              <a href={`tel:${BRAND.phone}`} className="flex items-center"><Phone className="w-4 h-4 mr-2" /><span className="phone-num">{BRAND.phone}</span></a>
             </Button>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[#4a4a4a]">
@@ -557,7 +557,7 @@ function ServicesCTA() {
                 <Link href="/#contact">Book a Free Clarity Call <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
-                <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" />{BRAND.phone}</a>
+                <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" /><span className="phone-num">{BRAND.phone}</span></a>
               </Button>
             </div>
           </div>
@@ -745,7 +745,7 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
                 </a>
               </Button>
               <Button asChild variant="outline" className="rounded-full h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
-                <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" />{BRAND.phone}</a>
+                <a href={`tel:${BRAND.phone}`}><Phone className="w-4 h-4 mr-2" /><span className="phone-num">{BRAND.phone}</span></a>
               </Button>
             </div>
           </div>

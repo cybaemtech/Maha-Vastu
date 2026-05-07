@@ -305,7 +305,7 @@ function TestimonialsHero() {
             <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
               <a href={`tel:${BRAND.phoneTel}`}>
                 <Phone className="mr-2 w-4 h-4" />
-                {BRAND.phone}
+                <span className="phone-num">{BRAND.phone}</span>
               </a>
             </Button>
           </div>

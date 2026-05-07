@@ -137,7 +137,7 @@ function ContactHero() {
             <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
               <a href={`tel:${BRAND.phoneTel}`} data-testid="contact-hero-call">
                 <Phone className="mr-2 w-4 h-4" />
-                Call {BRAND.phone}
+                Call <span className="phone-num">{BRAND.phone}</span>
               </a>
             </Button>
             <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10">

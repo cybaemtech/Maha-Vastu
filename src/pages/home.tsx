@@ -389,7 +389,7 @@ export function Nav() {
             data-testid="nav-phone-link"
           >
             <Phone className="w-4 h-4 text-[#ef4d2b]" />
-            {BRAND.phone}
+            <span className="phone-num">{BRAND.phone}</span>
           </a>
           <Button
             asChild
@@ -486,7 +486,7 @@ export function Nav() {
               className="flex items-center gap-2 text-sm font-medium text-[#1a1a1a] py-2 px-2"
             >
               <Phone className="w-4 h-4 text-[#ef4d2b]" />
-              {BRAND.phone}
+              <span className="phone-num">{BRAND.phone}</span>
             </a>
             <Button
               asChild
@@ -1247,7 +1247,7 @@ function Contact() {
                 Call
               </div>
               <div className="font-heading text-lg font-medium text-[#1a1a1a]">
-                {BRAND.phone}
+                <span className="phone-num">{BRAND.phone}</span>
               </div>
               <div className="text-sm text-[#4a4a4a] mt-0.5">
                 Mon–Sat · 10am to 7pm IST

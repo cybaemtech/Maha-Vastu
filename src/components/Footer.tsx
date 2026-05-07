@@ -66,7 +66,7 @@ export function Footer() {
           </div>
           <ul className="space-y-3 text-sm text-[#1a1a1a]">
             <li className="flex items-start gap-2">
-              <Phone className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> {BRAND.phone}
+              <Phone className="w-4 h-4 text-[#ef4d2b] mt-0.5" /> <span className="phone-num">{BRAND.phone}</span>
             </li>
             <li className="flex items-start gap-2">
               <Mail className="w-4 h-4 text-[#ef4d2b] mt-0.5" />{" "}
