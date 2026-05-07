@@ -15,6 +15,7 @@ import astrologyConsultationImg from "@/assets/attached_assets/himanshu_upadhyay
 import landPlotAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
 import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
+import ourLogoImg from "@/assets/attached_assets/logo.png";
 
 const BRAND = {
   phone: "+91 9923595755",
@@ -187,62 +188,149 @@ function StoryStrip() {
 }
 
 function FounderJourney() {
+  const specializations = [
+    { icon: Star, label: "Vedic Astrology" },
+    { icon: Compass, label: "Vastu Shastra" },
+    { icon: BookOpen, label: "Numerology (Sankhya Shastra)" },
+    { icon: Eye, label: "KP Astrology" },
+  ];
+
+  const stats = [
+    { icon: Award, num: "25+", label: "Years of Experience" },
+    { icon: Users, num: "5000+", label: "Students Trained" },
+    { icon: Sparkles, num: "100+", label: "Workshops & Seminars" },
+    { icon: BookOpen, num: "Rooted in Tradition", label: "Authentic Knowledge", small: true },
+  ];
+
   return (
-    <section className="section-container py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-      <div className="lg:col-span-5">
-        <div className="relative">
-          <div className="absolute -inset-4 bg-gradient-to-br from-[#f6d46b]/25 to-[#ef4d2b]/15 rounded-3xl blur-2xl" />
-          <div className="relative rounded-3xl overflow-hidden border border-[#f0e6d2] shadow-sm">
-            <img src={TEMPLE_IMG} alt="Sacred temple" loading="lazy" className="w-full h-[520px] object-cover" />
-          </div>
-          <div className="absolute -bottom-6 -right-6 bg-white border border-[#f0e6d2] rounded-2xl px-5 py-4 shadow-md hidden md:block max-w-[200px]">
-            <Quote className="w-5 h-5 text-[#ef4d2b] mb-1" />
-            <div className="text-sm italic text-[#1a1a1a] leading-snug">
-              "Energy is not mystery — it is mathematics you can feel."
-            </div>
-          </div>
+    <section>
+      {/* Banner */}
+      <div className="relative overflow-hidden bg-[#fff5eb]">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-60"
+          style={{ backgroundImage: `url(${aboutHeroBg})` }}
+          aria-hidden="true"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(to right, rgba(255,245,235,0.95) 0%, rgba(255,245,235,0.85) 45%, rgba(255,245,235,0.3) 100%)" }}
+          aria-hidden="true"
+        />
+        <div className="relative section-container py-14 md:py-20">
+          <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#ef4d2b] leading-tight">
+            Our Guidance. Our Foundation.
+          </h2>
+          <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
+          <p className="mt-4 text-[#4a4a4a] text-base md:text-lg max-w-sm leading-relaxed">
+            Our knowledge is rooted in ancient wisdom and refined through the blessings of our Guru.
+          </p>
         </div>
       </div>
 
-      <div className="lg:col-span-7">
-        <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">The founder's journey</div>
-        <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
-          A lifetime devoted to the science of <span className="mv-gradient-text font-medium">space and stars</span>.
-        </h2>
-
-        <div className="mt-8 space-y-6 text-[#4a4a4a] text-[17px] leading-relaxed">
-          <p>
-            Maha Vastu was founded by <span className="text-[#1a1a1a] font-medium">Acharya Vinayak</span>, a
-            Pimpri-Chinchwad-based consultant whose practice grew out of a simple, persistent question
-            asked of him by clients: <em>"why does my space feel heavy even when nothing is wrong?"</em>
-          </p>
-          <p>
-            That question led to nearly two decades of disciplined study under respected lineage holders,
-            including the teachings of <span className="text-[#1a1a1a] font-medium">Sumit Ravel</span> and the
-            <span className="text-[#1a1a1a] font-medium"> Vastu Shilpak</span> tradition — schools that treat the
-            home as a living organism and the chart as a personal blueprint.
-          </p>
-          <p>
-            Today, the Maha Vastu practice integrates classical Vedic astrology, the 45 Devata principles
-            of Vastu, and modern aura and chakra sciences — applied with the rigour of a consultant and the
-            care of a family priest. Every recommendation is written, time-bound, and built to be measured.
-          </p>
+      {/* Mentor card */}
+      <div className="section-container py-16 md:py-20">
+        <div className="text-center mb-10">
+          <h2 className="font-heading text-2xl md:text-4xl font-semibold text-[#1a1a1a]">
+            Guided by a Visionary Mentor
+          </h2>
+          <div className="flex items-center justify-center gap-3 mt-3">
+            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#f6d46b]" />
+            <Star className="w-4 h-4 text-[#ef4d2b] fill-[#ef4d2b]" />
+            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#f6d46b]" />
+          </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {[
-            "Trained in Vedic astrology & Kundali analysis",
-            "45 Devata Vastu principles practitioner",
-            "Astro Vastu personalisation specialist",
-            "Aura, chakra & meditation guidance",
-            "Land & plot energy consulting",
-            "Builder & industrial vastu advisor",
-          ].map((b, i) => (
-            <div key={i} className="flex items-start gap-2.5 text-[#1a1a1a]">
-              <Check className="w-5 h-5 text-[#ef4d2b] mt-0.5 shrink-0" />
-              <span className="text-[15px]">{b}</span>
+        <div className="border border-[#f0e6d2] rounded-2xl overflow-hidden bg-white shadow-sm">
+          <div className="grid grid-cols-1 md:grid-cols-12">
+            {/* Photo */}
+            <div className="md:col-span-4 bg-[#fdf8f2]">
+              <img
+                src={astrologyConsultationImg}
+                alt="Himanshu Upadhyay"
+                className="w-full h-72 md:h-full object-cover object-top"
+              />
             </div>
-          ))}
+
+            {/* Info */}
+            <div className="md:col-span-5 p-7 md:p-8 border-b md:border-b-0 md:border-r border-[#f0e6d2]">
+              <div className="text-xs uppercase tracking-[0.2em] font-semibold text-[#ef4d2b] mb-2">
+                Our Respected Mentor
+              </div>
+              <h3 className="font-heading text-2xl md:text-3xl font-semibold text-[#1a1a1a]">
+                Himanshu Upadhyay
+              </h3>
+              <div className="mt-3 space-y-1.5">
+                <div className="flex items-center gap-2 text-[#4a4a4a] text-sm">
+                  <MapPin className="w-4 h-4 text-[#ef4d2b] shrink-0" />
+                  <span>Ahmedabad, Gujarat, India</span>
+                </div>
+                <div className="flex items-center gap-2 text-[#4a4a4a] text-sm">
+                  <Award className="w-4 h-4 text-[#ef4d2b] shrink-0" />
+                  <span>Founder – Vinayak Astro Institute</span>
+                </div>
+              </div>
+              <p className="mt-5 text-[#4a4a4a] text-[15px] leading-relaxed">
+                Under the divine guidance and mentorship of Himanshu Upadhyay ji, we have deepened our
+                understanding of Vedic sciences and continue to serve with authenticity, accuracy and
+                a higher purpose.
+              </p>
+            </div>
+
+            {/* Logo + Specializations */}
+            <div className="md:col-span-3 p-7 md:p-8 flex flex-col items-center justify-center gap-6 bg-[#fdf8f2]">
+              <img
+                src={ourLogoImg}
+                alt="Shrisat Astro Vastu Logo"
+                className="w-28 h-28 object-contain"
+              />
+              <div className="w-full space-y-2.5">
+                {specializations.map((s, i) => (
+                  <div key={i} className="flex items-center gap-2.5 text-[#4a4a4a] text-sm">
+                    <div className="w-7 h-7 rounded-full bg-[#fff5eb] border border-[#f6d46b]/50 flex items-center justify-center shrink-0">
+                      <s.icon className="w-3.5 h-3.5 text-[#ef4d2b]" />
+                    </div>
+                    <span>{s.label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats bar */}
+        <div className="mt-6 rounded-2xl border border-[#f0e6d2] bg-[#fdf8f2] px-4 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {stats.map((s, i) => (
+              <div key={i} className="flex flex-col items-center gap-2">
+                <div className="w-10 h-10 rounded-full bg-white border border-[#f6d46b]/50 flex items-center justify-center">
+                  <s.icon className="w-5 h-5 text-[#ef4d2b]" />
+                </div>
+                {s.small ? (
+                  <>
+                    <div className="text-xs text-[#4a4a4a]">{s.label}</div>
+                    <div className="font-heading text-sm font-semibold mv-gradient-text leading-tight">{s.num}</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="text-xs text-[#4a4a4a]">{s.label}</div>
+                    <div className="font-heading text-2xl font-bold mv-gradient-text">{s.num}</div>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quote */}
+        <div className="mt-8 text-center px-4">
+          <div className="inline-flex items-start gap-2 max-w-2xl">
+            <Quote className="w-6 h-6 text-[#f6d46b] shrink-0 mt-1 rotate-180" />
+            <p className="text-[#4a4a4a] text-base md:text-lg leading-relaxed italic">
+              We are grateful for the blessings of our Guru, which inspire us to guide you towards{" "}
+              <span className="mv-gradient-text font-semibold not-italic">harmony, success, and positive transformation.</span>
+            </p>
+            <Quote className="w-6 h-6 text-[#f6d46b] shrink-0 mt-1" />
+          </div>
         </div>
       </div>
     </section>
