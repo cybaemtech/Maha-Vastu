@@ -123,13 +123,12 @@ function AboutHero() {
             <Sparkles className="w-3.5 h-3.5" />
             About Maha Vastu
           </div>
-          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
-            Where ancient <span className="mv-gradient-text font-medium">cosmic wisdom</span> meets modern, measurable practice.
+          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-semibold tracking-tight text-[#ef4d2b] leading-[1.05]">
+            Our Guidance. Our Foundation.
           </h1>
-          <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed max-w-2xl">
-            For nearly two decades we have helped families, builders, and businesses align their homes,
-            destinies, and energy with the timeless principles of Vastu Shastra and Vedic Astrology — without
-            superstition, without fear, and without breaking a single wall.
+          <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
+          <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed max-w-md">
+            Our knowledge is rooted in ancient wisdom and refined through the blessings of our Guru.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
@@ -204,29 +203,6 @@ function FounderJourney() {
 
   return (
     <section>
-      {/* Banner */}
-      <div className="relative overflow-hidden bg-[#fff5eb]">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-60"
-          style={{ backgroundImage: `url(${aboutHeroBg})` }}
-          aria-hidden="true"
-        />
-        <div
-          className="absolute inset-0"
-          style={{ background: "linear-gradient(to right, rgba(255,245,235,0.95) 0%, rgba(255,245,235,0.85) 45%, rgba(255,245,235,0.3) 100%)" }}
-          aria-hidden="true"
-        />
-        <div className="relative section-container py-14 md:py-20">
-          <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[#ef4d2b] leading-tight">
-            Our Guidance. Our Foundation.
-          </h2>
-          <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
-          <p className="mt-4 text-[#4a4a4a] text-base md:text-lg max-w-sm leading-relaxed">
-            Our knowledge is rooted in ancient wisdom and refined through the blessings of our Guru.
-          </p>
-        </div>
-      </div>
-
       {/* Mentor card */}
       <div className="section-container py-16 md:py-20">
         <div className="text-center mb-10">
@@ -675,7 +651,6 @@ export default function About() {
   return (
     <main className="bg-white">
       <AboutHero />
-      <StoryStrip />
       <FounderJourney />
       <Pillars />
       <Lineage />
