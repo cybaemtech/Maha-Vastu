@@ -11,7 +11,7 @@ import aboutHeroBg from "@/assets/about-hero-bg.png";
 import servicesHeroBg from "@/assets/services-hero-bg.png";
 import vastConsultationImg from "@/assets/attached_assets/Vastu_Consultation.png";
 import astroVastuImg from "@/assets/attached_assets/Astro_Vastu.png";
-import astrologyConsultationImg from "@/assets/attached_assets/Astrology_Consultation.png";
+import astrologyConsultationImg from "@/assets/attached_assets/himanshu_upadhyay.png";
 import landPlotAnalysisImg from "@/assets/attached_assets/LandPlotAnalysis.png";
 import auraChakraHealingImg from "@/assets/attached_assets/AuraChakraHealing.png";
 import businessIndustrialImg from "@/assets/attached_assets/BusinessIndustrialConsulting.png";
