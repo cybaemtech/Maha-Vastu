@@ -121,13 +121,13 @@ function AboutHero() {
         <div className="lg:col-span-7">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
             <Sparkles className="w-3.5 h-3.5" />
-            About Maha Vastu
+            About Shrisat Astro Vastu
           </div>
           <h1 className="font-heading mt-5 text-4xl md:text-6xl font-semibold tracking-tight text-[#ef4d2b] leading-[1.05]">
             Our Guidance. Our Foundation.
           </h1>
           <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
-          <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed max-w-md">
+          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-md">
             Our knowledge is rooted in ancient wisdom and refined through the blessings of our Guru.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -178,7 +178,7 @@ function StoryStrip() {
         {stats.map((s, i) => (
           <div key={i} className="text-center">
             <div className="font-heading text-3xl md:text-4xl mv-gradient-text font-medium">{s.num}</div>
-            <div className="mt-1 text-xs md:text-sm text-[#4a4a4a]">{s.label}</div>
+            <div className="mt-1 text-sm md:text-base text-[#2a2a2a]">{s.label}</div>
           </div>
         ))}
       </div>
@@ -229,23 +229,23 @@ function FounderJourney() {
 
             {/* Info */}
             <div className="md:col-span-5 p-7 md:p-8 border-b md:border-b-0 md:border-r border-[#f0e6d2]">
-              <div className="text-xs uppercase tracking-[0.2em] font-semibold text-[#ef4d2b] mb-2">
+              <div className="text-sm uppercase tracking-[0.2em] font-semibold text-[#ef4d2b] mb-2">
                 Our Respected Mentor
               </div>
-              <h3 className="font-heading text-2xl md:text-3xl font-semibold text-[#1a1a1a]">
+              <h3 className="font-heading text-3xl md:text-4xl font-semibold text-[#1a1a1a]">
                 Himanshu Upadhyay
               </h3>
-              <div className="mt-3 space-y-1.5">
-                <div className="flex items-center gap-2 text-[#4a4a4a] text-sm">
+              <div className="mt-3 space-y-2">
+                <div className="flex items-center gap-2 text-[#2a2a2a] text-base">
                   <MapPin className="w-4 h-4 text-[#ef4d2b] shrink-0" />
                   <span>Ahmedabad, Gujarat, India</span>
                 </div>
-                <div className="flex items-center gap-2 text-[#4a4a4a] text-sm">
+                <div className="flex items-center gap-2 text-[#2a2a2a] text-base">
                   <Award className="w-4 h-4 text-[#ef4d2b] shrink-0" />
                   <span>Founder – Vinayak Astro Institute</span>
                 </div>
               </div>
-              <p className="mt-5 text-[#4a4a4a] text-[15px] leading-relaxed">
+              <p className="mt-6 text-[#2a2a2a] text-lg leading-relaxed">
                 Under the divine guidance and mentorship of Himanshu Upadhyay ji, we have deepened our
                 understanding of Vedic sciences and continue to serve with authenticity, accuracy and
                 a higher purpose.
@@ -257,11 +257,11 @@ function FounderJourney() {
               <img
                 src={ourLogoImg}
                 alt="Shrisat Astro Vastu Logo"
-                className="w-28 h-28 object-contain"
+                className="w-34 h-34 object-contain"
               />
-              <div className="w-full space-y-2.5">
+              <div className="w-full space-y-3">
                 {specializations.map((s, i) => (
-                  <div key={i} className="flex items-center gap-2.5 text-[#4a4a4a] text-sm">
+                  <div key={i} className="flex items-center gap-2.5 text-[#2a2a2a] text-base">
                     <div className="w-7 h-7 rounded-full bg-[#fff5eb] border border-[#f6d46b]/50 flex items-center justify-center shrink-0">
                       <s.icon className="w-3.5 h-3.5 text-[#ef4d2b]" />
                     </div>
@@ -274,22 +274,22 @@ function FounderJourney() {
         </div>
 
         {/* Stats bar */}
-        <div className="mt-6 rounded-2xl border border-[#f0e6d2] bg-[#fdf8f2] px-4 py-6">
+        <div className="mt-6 rounded-2xl border border-[#f0e6d2] bg-[#fdf8f2] px-4 py-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {stats.map((s, i) => (
-              <div key={i} className="flex flex-col items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-white border border-[#f6d46b]/50 flex items-center justify-center">
-                  <s.icon className="w-5 h-5 text-[#ef4d2b]" />
+              <div key={i} className="flex flex-col items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-white border border-[#f6d46b]/50 flex items-center justify-center">
+                  <s.icon className="w-6 h-6 text-[#ef4d2b]" />
                 </div>
                 {s.small ? (
                   <>
-                    <div className="text-xs text-[#4a4a4a]">{s.label}</div>
-                    <div className="font-heading text-sm font-semibold mv-gradient-text leading-tight">{s.num}</div>
+                    <div className="text-sm text-[#2a2a2a]">{s.label}</div>
+                    <div className="font-heading text-xl font-semibold mv-gradient-text leading-tight">{s.num}</div>
                   </>
                 ) : (
                   <>
-                    <div className="text-xs text-[#4a4a4a]">{s.label}</div>
-                    <div className="font-heading text-2xl font-bold mv-gradient-text">{s.num}</div>
+                    <div className="text-sm text-[#2a2a2a]">{s.label}</div>
+                    <div className="font-heading text-3xl font-bold mv-gradient-text">{s.num}</div>
                   </>
                 )}
               </div>
@@ -301,7 +301,7 @@ function FounderJourney() {
         <div className="mt-8 text-center px-4">
           <div className="inline-flex items-start gap-2 max-w-2xl">
             <Quote className="w-6 h-6 text-[#f6d46b] shrink-0 mt-1 rotate-180" />
-            <p className="text-[#4a4a4a] text-base md:text-lg leading-relaxed italic">
+            <p className="text-[#2a2a2a] text-base md:text-xl leading-relaxed italic">
               We are grateful for the blessings of our Guru, which inspire us to guide you towards{" "}
               <span className="mv-gradient-text font-semibold not-italic">harmony, success, and positive transformation.</span>
             </p>
@@ -345,7 +345,7 @@ function Pillars() {
           <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
             Four pillars that shape every consultation.
           </h2>
-          <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
+          <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
             These aren't slogans. They are the working principles every advisor in our practice agrees to
             before they sit across from a client.
           </p>
@@ -362,7 +362,7 @@ function Pillars() {
                 <p.icon className="w-5 h-5 text-white" />
               </div>
               <h3 className="mt-5 font-heading text-xl font-medium text-[#1a1a1a]">{p.title}</h3>
-              <p className="mt-2 text-[#4a4a4a] leading-relaxed">{p.desc}</p>
+              <p className="mt-2 text-[#2a2a2a] leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -398,8 +398,8 @@ function Lineage() {
           <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
             Rooted in three sacred sciences.
           </h2>
-          <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
-            Maha Vastu is not a single discipline — it is a deliberate weaving of three traditional sciences,
+          <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
+            Shrisat Astro Vastu is not a single discipline — it is a deliberate weaving of three traditional sciences,
             each studied formally, each practiced daily.
           </p>
 
@@ -427,7 +427,7 @@ function Lineage() {
               </div>
               <div>
                 <h3 className="font-heading text-xl font-medium text-[#1a1a1a]">{l.title}</h3>
-                <p className="mt-2 text-[#4a4a4a] leading-relaxed">{l.body}</p>
+                <p className="mt-2 text-[#2a2a2a] leading-relaxed">{l.body}</p>
               </div>
             </div>
           ))}
@@ -493,7 +493,7 @@ function Timeline() {
                       {t.year}
                     </div>
                     <h3 className="font-heading mt-3 text-2xl font-medium text-[#1a1a1a]">{t.title}</h3>
-                    <p className="mt-2 text-[#4a4a4a] leading-relaxed">{t.body}</p>
+                    <p className="mt-2 text-[#2a2a2a] leading-relaxed">{t.body}</p>
                   </div>
                   <div className="hidden md:block" />
 
@@ -524,7 +524,7 @@ function MissionVision() {
             <h3 className="font-heading mt-3 text-2xl md:text-3xl font-light text-[#1a1a1a] leading-snug">
               To make Vastu and Astrology a calm, practical tool for everyday families — not a source of fear.
             </h3>
-            <p className="mt-4 text-[#4a4a4a] leading-relaxed">
+            <p className="mt-4 text-[#2a2a2a] leading-relaxed">
               We translate ancient texts into clear written reports, simple remedies and measurable outcomes.
               No client should ever leave a consultation more anxious than they arrived.
             </p>
@@ -541,8 +541,8 @@ function MissionVision() {
             <h3 className="font-heading mt-3 text-2xl md:text-3xl font-light text-[#1a1a1a] leading-snug">
               A generation that aligns home, kundali and inner energy — and quietly outgrows their old struggles.
             </h3>
-            <p className="mt-4 text-[#4a4a4a] leading-relaxed">
-              We see Maha Vastu serving 25,000 homes and 500 builders across India by 2030 — bringing Astro
+            <p className="mt-4 text-[#2a2a2a] leading-relaxed">
+              We see Shrisat Astro Vastu serving 25,000 homes and 500 builders across India by 2030 — bringing Astro
               Vastu into the mainstream of modern decision-making.
             </p>
           </div>
@@ -582,7 +582,7 @@ function Practice() {
                     <it.icon className="w-4.5 h-4.5 text-[#ef4d2b]" />
                   </div>
                   <h3 className="mt-4 font-heading text-lg font-medium text-[#1a1a1a]">{it.title}</h3>
-                  <p className="mt-2 text-[#4a4a4a] text-sm leading-relaxed">{it.body}</p>
+                  <p className="mt-2 text-[#2a2a2a] text-sm leading-relaxed">{it.body}</p>
                 </div>
               ))}
             </div>
@@ -609,7 +609,7 @@ function Promise() {
               "If we cannot improve your home, your kundali, or your peace —
               <span className="mv-gradient-text font-medium"> we will tell you so honestly</span>."
             </h2>
-            <p className="mt-5 text-[#4a4a4a] leading-relaxed text-lg">
+            <p className="mt-5 text-[#2a2a2a] leading-relaxed text-lg">
               That is the only promise we make. Eighteen years of practice has taught us that honesty,
               applied to ancient sciences, is the most powerful remedy of all.
             </p>
@@ -661,3 +661,4 @@ export default function About() {
     </main>
   );
 }
+

@@ -327,7 +327,7 @@ function ServicesHero() {
           <h1 className="font-heading mt-6 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light tracking-tight text-[#1a1a1a]">
             A complete <span className="mv-gradient-text font-medium">consulting practice</span> — astrology, Vastu, and energy science.
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] max-w-2xl leading-relaxed">
             Six service pillars built around one promise: clear, measurable, non-destructive solutions for your home, career, relationships, and energy alignment.
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
@@ -338,7 +338,7 @@ function ServicesHero() {
               <a href={`tel:${BRAND.phone}`} className="flex items-center"><Phone className="w-4 h-4 mr-2" /><span className="phone-num">{BRAND.phone}</span></a>
             </Button>
           </div>
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[#4a4a4a]">
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[#2a2a2a]">
             <div className="flex items-center gap-2"><Award className="w-4 h-4 text-[#ef4d2b]" /> 18+ years of consulting</div>
             <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-[#ef4d2b]" /> Non-destructive remedies</div>
             <div className="flex items-center gap-2"><Star className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" /> 4.9 / 5 client rating</div>
@@ -399,7 +399,7 @@ function ServiceCardsGrid() {
               </div>
               <div className="font-heading text-xl font-medium text-[#1a1a1a]">{s.title}</div>
               <div className="text-sm text-[#ef4d2b] mt-1 font-medium">{s.tag}</div>
-              <p className="text-sm text-[#4a4a4a] mt-3 leading-relaxed line-clamp-3">{s.intro}</p>
+              <p className="text-sm text-[#2a2a2a] mt-3 leading-relaxed line-clamp-3">{s.intro}</p>
               <div className="mt-5 inline-flex items-center text-sm font-medium text-[#1a1a1a] group-hover:text-[#ef4d2b]">
                 Read more <ChevronRight className="w-4 h-4 ml-1" />
               </div>
@@ -445,7 +445,7 @@ function ServiceDetail({ service, index }: { service: Service; index: number }) 
                 <service.icon className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-[#4a4a4a]">For</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-[#2a2a2a]">For</div>
                 <div className="text-sm font-medium text-[#1a1a1a] max-w-[220px] leading-tight">{service.audience}</div>
               </div>
             </div>
@@ -459,7 +459,7 @@ function ServiceDetail({ service, index }: { service: Service; index: number }) 
             <h2 className="font-heading mt-4 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               {service.title}
             </h2>
-            <p className="mt-4 text-base md:text-lg text-[#4a4a4a] leading-relaxed">{service.intro}</p>
+            <p className="mt-4 text-base md:text-lg text-[#2a2a2a] leading-relaxed">{service.intro}</p>
 
             <div className="mt-7">
               <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a] mb-3">What's included</div>
@@ -494,7 +494,7 @@ function ServiceDetail({ service, index }: { service: Service; index: number }) 
                 <Link href="/#contact">{service.cta} <ArrowRight className="w-4 h-4 ml-2" /></Link>
               </Button>
               <Button asChild variant="outline" className="rounded-full px-6 h-11 text-sm border-[#25d366] text-[#25d366] hover:bg-[#25d366]/10">
-                <a href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi Maha Vastu, I'm interested in ${service.title}.`)}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hi Shrisat Astro Vastu, I'm interested in ${service.title}.`)}`} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp
                 </a>
               </Button>
@@ -524,7 +524,7 @@ function ProcessSection() {
                 {s.n}
               </div>
               <div className="font-heading text-lg font-medium mt-4 text-[#1a1a1a]">{s.title}</div>
-              <p className="text-sm text-[#4a4a4a] mt-2 leading-relaxed">{s.desc}</p>
+              <p className="text-sm text-[#2a2a2a] mt-2 leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -548,7 +548,7 @@ function ServicesCTA() {
               <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
                 Not sure which service fits? <span className="mv-gradient-text font-medium">Start with a free clarity call.</span>
               </h2>
-              <p className="mt-4 text-[#4a4a4a] text-base md:text-lg max-w-2xl">
+              <p className="mt-4 text-[#2a2a2a] text-base md:text-lg max-w-2xl">
                 A 15-minute conversation to understand your situation and recommend the right starting point — no commitment required.
               </p>
             </div>
@@ -578,7 +578,7 @@ function MiniTestimonial() {
         <div className="mt-6 flex items-center justify-center gap-1">
           {[0, 1, 2, 3, 4].map((i) => <Star key={i} className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" />)}
         </div>
-        <div className="mt-3 text-sm text-[#4a4a4a]">
+        <div className="mt-3 text-sm text-[#2a2a2a]">
           <span className="font-medium text-[#1a1a1a]">Aanya K.</span> · Product Lead, Bengaluru
         </div>
       </div>
@@ -620,7 +620,7 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
                 <service.icon className="w-5 h-5 text-white" />
               </div>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-[#4a4a4a]">For</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-[#2a2a2a]">For</div>
                 <div className="text-sm font-medium text-[#1a1a1a] max-w-[220px] leading-tight">{service.audience}</div>
               </div>
             </div>
@@ -635,7 +635,7 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
             <h2 className="font-heading mt-4 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               {service.title}
             </h2>
-            <p className="mt-4 text-base md:text-lg text-[#4a4a4a] leading-relaxed">{service.intro}</p>
+            <p className="mt-4 text-base md:text-lg text-[#2a2a2a] leading-relaxed">{service.intro}</p>
 
             <div className="mt-7">
               <div className="text-xs uppercase tracking-[0.22em] font-semibold text-[#1a1a1a] mb-3">What's included</div>
@@ -682,7 +682,7 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
                     </div>
                     <div>
                       <div className="font-heading text-base font-medium text-[#1a1a1a]">{p.title}</div>
-                      <div className="mt-1 text-sm text-[#4a4a4a]">{p.desc1}</div>
+                      <div className="mt-1 text-sm text-[#2a2a2a]">{p.desc1}</div>
                       <div className="text-sm text-[#ef4d2b] font-medium">{p.desc2}</div>
                     </div>
                   </div>
@@ -729,9 +729,9 @@ function VedicNumerologyDetail({ service, index }: { service: Service; index: nu
                 <span className="mv-gradient-text font-medium">in 5–10 Minutes</span>
               </h3>
               {service.valueProp && (
-                <p className="mt-3 text-[#4a4a4a] text-base leading-relaxed max-w-xl">{service.valueProp}</p>
+                <p className="mt-3 text-[#2a2a2a] text-base leading-relaxed max-w-xl">{service.valueProp}</p>
               )}
-              <p className="mt-2 text-sm text-[#4a4a4a] leading-relaxed">
+              <p className="mt-2 text-sm text-[#2a2a2a] leading-relaxed">
                 Simply share your birth date with us on WhatsApp and receive instant guidance.
               </p>
             </div>
@@ -798,3 +798,4 @@ export default function ServicesPage() {
     </main>
   );
 }
+

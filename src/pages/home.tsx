@@ -181,7 +181,7 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "We used Maha Vastu for three residential projects. The analysis was technical, respectful of our design, and the bookings noticeably improved after launch.",
+      "We used Shrisat Astro Vastu for three residential projects. The analysis was technical, respectful of our design, and the bookings noticeably improved after launch.",
     name: "Devraj S.",
     role: "Builder, Mumbai",
   },
@@ -282,7 +282,7 @@ export function Nav() {
             <div className="font-heading text-xl font-semibold tracking-tight text-[#1a1a1a]">
               {BRAND.name}
             </div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-[#4a4a4a]">
+            <div className="text-xs uppercase tracking-[0.25em] text-[#2a2a2a]">
               {BRAND.tagline}
             </div>
           </div>
@@ -346,7 +346,7 @@ export function Nav() {
                             </span>
                           )}
                         </div>
-                        <div className="text-xs text-[#4a4a4a] mt-0.5">
+                        <div className="text-xs text-[#2a2a2a] mt-0.5">
                           {s.tag}
                         </div>
                       </div>
@@ -429,7 +429,7 @@ export function Nav() {
               <button
                 type="button"
                 onClick={() => setMobileServicesOpen((s) => !s)}
-                className="p-2 text-[#4a4a4a]"
+                className="p-2 text-[#2a2a2a]"
                 aria-expanded={mobileServicesOpen}
                 aria-label="Toggle services menu"
               >
@@ -450,7 +450,7 @@ export function Nav() {
                         setOpen(false);
                         setMobileServicesOpen(false);
                       }}
-                      className="text-sm text-[#4a4a4a] hover:text-[#ef4d2b] py-1"
+                      className="text-sm text-[#2a2a2a] hover:text-[#ef4d2b] py-1"
                     >
                       {s.title}
                     </Link>
@@ -759,7 +759,7 @@ function Hero() {
             Where your stars meet{" "}
             <span className="mv-gradient-text font-medium">your space.</span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-[#4a4a4a] max-w-2xl leading-relaxed">
+          <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] max-w-2xl leading-relaxed">
             Personalised, non-destructive solutions for your home, career,
             relationships, and energy alignment — backed by 18+ years of
             consulting and 12,000+ real transformations.
@@ -781,7 +781,7 @@ function Hero() {
               <a href="#services">Explore Services</a>
             </Button>
           </div>
-          <div className="mt-10 flex flex-wrap items-center gap-5 text-sm text-[#4a4a4a]">
+          <div className="mt-10 flex flex-wrap items-center gap-5 text-sm text-[#2a2a2a]">
             <div className="flex items-center gap-1">
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star
@@ -815,7 +815,7 @@ function Stats() {
               <div className="font-heading text-3xl md:text-4xl font-medium tracking-tight text-[#1a1a1a]">
                 {s.value}
               </div>
-              <div className="text-xs md:text-sm text-[#4a4a4a] mt-1">
+              <div className="text-sm md:text-base text-[#2a2a2a] mt-1">
                 {s.label}
               </div>
             </div>
@@ -838,7 +838,7 @@ function Services() {
             Seven services, one integrated practice.
           </h2>
         </div>
-        <p className="text-[#4a4a4a] max-w-md leading-relaxed">
+        <p className="text-[#2a2a2a] max-w-md leading-relaxed">
           Every engagement begins with listening. Explore our core services
           below, or book a free 15-minute clarity call to find the right fit.
         </p>
@@ -905,7 +905,7 @@ function HowItWorks() {
           <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
             A clear path from first conversation to real transformation.
           </h2>
-          <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
+          <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
             No guesswork. No anxiety. Just a clear path from first conversation
             to real transformation.
           </p>
@@ -924,7 +924,7 @@ function HowItWorks() {
                 <h3 className="mt-6 font-heading text-xl font-medium text-[#1a1a1a]">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-[#4a4a4a] leading-relaxed text-[15px]">
+                <p className="mt-2 text-[#2a2a2a] leading-relaxed text-lg">
                   {s.desc}
                 </p>
               </div>
@@ -944,13 +944,13 @@ function About() {
     >
       <div>
         <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
-          About Maha Vastu
+          About Shrisat Astro Vastu
         </div>
         <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
           A modern consulting practice rooted in tradition.
         </h2>
-        <p className="mt-5 text-[#4a4a4a] text-lg leading-relaxed">
-          Maha Vastu was founded in Pimpri-Chinchwad with a clear mission: make
+        <p className="mt-5 text-[#2a2a2a] text-lg leading-relaxed">
+          Shrisat Astro Vastu was founded in Pimpri-Chinchwad with a clear mission: make
           Vastu, Astrology, and Energy work accessible, analytical, and
           results-driven — free of superstition, fear, or theatrics.
         </p>
@@ -965,7 +965,7 @@ function About() {
           ].map((b, i) => (
             <div key={i} className="flex items-start gap-2.5 text-[#1a1a1a]">
               <Check className="w-5 h-5 text-[#ef4d2b] mt-0.5 shrink-0" />
-              <span className="text-[15px]">{b}</span>
+              <span className="text-lg">{b}</span>
             </div>
           ))}
         </div>
@@ -993,7 +993,7 @@ function About() {
         <div className="relative rounded-3xl overflow-hidden border border-[#f0e6d2] shadow-sm">
           <img
             src={AURA_IMG}
-            alt="Maha Vastu aura"
+            alt="Shrisat Astro Vastu aura"
             className="w-full h-[420px] object-cover"
           />
         </div>
@@ -1021,7 +1021,7 @@ function Philosophy() {
           <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
             Four principles we refuse to compromise on.
           </h2>
-          <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
+          <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
             Our practice sits where the cosmos, the home, and the self meet.
             Here's the feeling it leaves behind.
           </p>
@@ -1038,7 +1038,7 @@ function Philosophy() {
               <h3 className="mt-4 font-heading text-xl font-medium text-[#1a1a1a]">
                 {p.title}
               </h3>
-              <p className="mt-2 text-[#4a4a4a] leading-relaxed">{p.desc}</p>
+              <p className="mt-2 text-[#2a2a2a] leading-relaxed">{p.desc}</p>
             </div>
           ))}
         </div>
@@ -1061,7 +1061,7 @@ function Signs() {
             <h2 className="font-heading mt-5 text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-[#1a1a1a]">
               Signs it's time to call us.
             </h2>
-            <p className="mt-4 text-[#4a4a4a] leading-relaxed">
+            <p className="mt-4 text-[#2a2a2a] leading-relaxed">
               If any of these feel familiar, a 15-minute clarity call usually
               points you in the right direction.
             </p>
@@ -1069,7 +1069,7 @@ function Signs() {
               {SIGNS.map((s, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-2 text-[15px] text-[#1a1a1a]"
+                  className="flex items-start gap-2 text-lg text-[#1a1a1a]"
                 >
                   <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#ef4d2b] shrink-0" />
                   <span>{s}</span>
@@ -1083,7 +1083,7 @@ function Signs() {
               <h3 className="font-heading text-2xl font-medium mt-4 text-[#1a1a1a]">
                 Free 15-min clarity call
               </h3>
-              <p className="mt-2 text-[#4a4a4a] text-sm leading-relaxed">
+              <p className="mt-2 text-[#2a2a2a] text-sm leading-relaxed">
                 No obligation. No sales. Just a written assessment of what to do
                 next.
               </p>
@@ -1156,7 +1156,7 @@ function Testimonials() {
                   <div className="font-heading text-base font-medium text-[#1a1a1a]">
                     {t.name}
                   </div>
-                  <div className="text-xs text-[#4a4a4a]">{t.role}</div>
+                  <div className="text-sm text-[#2a2a2a]">{t.role}</div>
                 </div>
               </div>
             </div>
@@ -1226,8 +1226,8 @@ function Contact() {
         <h2 className="font-heading mt-3 text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-[#1a1a1a] max-w-4xl">
           Let's understand your situation first.
         </h2>
-        <p className="mt-5 text-lg text-[#4a4a4a] max-w-2xl">
-          Share a few details about your situation. A Maha Vastu advisor will
+        <p className="mt-5 text-lg text-[#2a2a2a] max-w-2xl">
+          Share a few details about your situation. A Shrisat Astro Vastu advisor will
           review your case and respond within 24 hours with a suggested next
           step — free.
         </p>
@@ -1249,13 +1249,13 @@ function Contact() {
               <div className="font-heading text-lg font-medium text-[#1a1a1a]">
                 <span className="phone-num">{BRAND.phone}</span>
               </div>
-              <div className="text-sm text-[#4a4a4a] mt-0.5">
+              <div className="text-sm text-[#2a2a2a] mt-0.5">
                 Mon–Sat · 10am to 7pm IST
               </div>
             </div>
           </div>
           <a
-            href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`}
+            href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
             target="_blank"
             rel="noreferrer"
             className="flex items-start gap-4 p-6 rounded-2xl bg-white border border-[#f0e6d2] hover:shadow-md transition-shadow"
@@ -1271,7 +1271,7 @@ function Contact() {
               <div className="font-heading text-lg font-medium text-[#1a1a1a]">
                 Chat with us
               </div>
-              <div className="text-sm text-[#4a4a4a] mt-0.5">
+              <div className="text-sm text-[#2a2a2a] mt-0.5">
                 Fastest response, usually within an hour
               </div>
             </div>
@@ -1290,7 +1290,7 @@ function Contact() {
               <div className="font-heading text-lg font-medium text-[#1a1a1a] break-all">
                 {BRAND.email}
               </div>
-              <div className="text-sm text-[#4a4a4a] mt-0.5">
+              <div className="text-sm text-[#2a2a2a] mt-0.5">
                 For reports, follow-ups, receipts
               </div>
             </div>
@@ -1306,7 +1306,7 @@ function Contact() {
               <div className="font-heading text-lg font-medium text-[#1a1a1a]">
                 {BRAND.address}
               </div>
-              <div className="text-sm text-[#4a4a4a] mt-0.5">
+              <div className="text-sm text-[#2a2a2a] mt-0.5">
                 Visits by appointment only
               </div>
             </div>
@@ -1322,7 +1322,7 @@ function Contact() {
               <h3 className="mt-5 font-heading text-2xl font-medium text-[#1a1a1a]">
                 Request received.
               </h3>
-              <p className="mt-2 text-[#4a4a4a] leading-relaxed">
+              <p className="mt-2 text-[#2a2a2a] leading-relaxed">
                 Our team will reach out within 24 hours. Check your email and
                 WhatsApp for the intake form.
               </p>
@@ -1333,7 +1333,7 @@ function Contact() {
               className="bg-white rounded-2xl border border-[#f0e6d2] p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-4"
             >
               <div className="md:col-span-1">
-                <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+                <label className="text-xs uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
                   Your name
                 </label>
                 <input
@@ -1344,7 +1344,7 @@ function Contact() {
                 />
               </div>
               <div className="md:col-span-1">
-                <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+                <label className="text-xs uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
                   Mobile
                 </label>
                 <input
@@ -1355,7 +1355,7 @@ function Contact() {
                 />
               </div>
               <div className="md:col-span-1">
-                <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+                <label className="text-sm uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
                   Email
                 </label>
                 <input
@@ -1367,7 +1367,7 @@ function Contact() {
                 />
               </div>
               <div className="md:col-span-1">
-                <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+                <label className="text-sm uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
                   Service
                 </label>
                 <select
@@ -1386,7 +1386,7 @@ function Contact() {
                 </select>
               </div>
               <div className="md:col-span-2">
-                <label className="text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+                <label className="text-xs uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
                   Tell us a little
                 </label>
                 <textarea
@@ -1405,8 +1405,8 @@ function Contact() {
                 </div>
               )}
               <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between pt-2">
-                <p className="text-xs text-[#4a4a4a] max-w-md leading-relaxed">
-                  By submitting, you agree to be contacted by Maha Vastu via
+                <p className="text-xs text-[#2a2a2a] max-w-md leading-relaxed">
+                  By submitting, you agree to be contacted by Shrisat Astro Vastu via
                   phone, email, or WhatsApp.
                 </p>
                 <Button
@@ -1423,7 +1423,7 @@ function Contact() {
 
       <div className="mt-12 rounded-3xl overflow-hidden border border-[#f0e6d2] h-[450px] shadow-md">
         <iframe
-          title="Maha Vastu Location"
+          title="Shrisat Astro Vastu Location"
           src={`https://www.google.com/maps?q=${encodeURIComponent(BRAND.mapsQuery)}&output=embed`}
           className="w-full h-full"
           loading="lazy"
@@ -1436,7 +1436,7 @@ function Contact() {
 export function FloatingWhatsApp() {
   return (
     <a
-      href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`}
+      href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
       target="_blank"
       rel="noreferrer"
       data-testid="floating-whatsapp-btn"
@@ -1450,7 +1450,7 @@ export function FloatingWhatsApp() {
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Maha Vastu — Astrology & Vastu Science";
+    document.title = "Shrisat Astro Vastu — Astrology & Vastu Science";
   }, []);
   return (
     <div className="min-h-screen bg-white text-[#1a1a1a]">
@@ -1472,3 +1472,4 @@ export default function Home() {
     </div>
   );
 }
+

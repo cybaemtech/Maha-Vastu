@@ -52,7 +52,7 @@ const ALL_TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "We used Maha Vastu for three residential projects. The analysis was technical, respectful of our design, and bookings noticeably improved after launch.",
+      "We used Shrisat Astro Vastu for three residential projects. The analysis was technical, respectful of our design, and bookings noticeably improved after launch.",
     name: "Devraj S.",
     role: "Builder",
     location: "Mumbai",
@@ -291,8 +291,8 @@ function TestimonialsHero() {
           <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
             Real homes. Real charts. <span className="mv-gradient-text font-medium">Real change.</span>
           </h1>
-          <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed max-w-2xl">
-            For nearly two decades, families, builders and businesses have trusted Maha Vastu with the most
+          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-2xl">
+            For nearly two decades, families, builders and businesses have trusted Shrisat Astro Vastu with the most
             personal corners of their lives. Here are some of the stories — in their own words.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -332,9 +332,9 @@ function StatsBar() {
             </div>
             <div className="mt-3 font-heading text-3xl md:text-4xl mv-gradient-text font-medium">
               {s.num}
-              {s.suffix && <span className="text-base text-[#4a4a4a] font-light ml-1">{s.suffix}</span>}
+              {s.suffix && <span className="text-base text-[#2a2a2a] font-light ml-1">{s.suffix}</span>}
             </div>
-            <div className="mt-1 text-xs md:text-sm text-[#4a4a4a]">{s.label}</div>
+            <div className="mt-1 text-sm md:text-base text-[#2a2a2a]">{s.label}</div>
           </div>
         ))}
       </div>
@@ -364,7 +364,7 @@ function FeaturedQuote() {
             </div>
             <div className="text-left">
               <div className="font-heading text-lg font-medium text-[#1a1a1a]">{featured.name}</div>
-              <div className="text-sm text-[#4a4a4a]">
+              <div className="text-sm text-[#2a2a2a]">
                 {featured.role} · {featured.location}
               </div>
             </div>
@@ -445,7 +445,7 @@ function TestimonialsGrid() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-heading text-base font-medium text-[#1a1a1a] truncate">{t.name}</div>
-                  <div className="text-xs text-[#4a4a4a] flex items-center gap-1 mt-0.5">
+                  <div className="text-xs text-[#2a2a2a] flex items-center gap-1 mt-0.5">
                     <span>{t.role}</span>
                     <span className="text-[#f0e6d2]">·</span>
                     <MapPin className="w-3 h-3 text-[#ef4d2b]" />
@@ -454,7 +454,7 @@ function TestimonialsGrid() {
                 </div>
               </div>
 
-              <div className="mt-3 flex items-start gap-2 text-[12px] text-[#4a4a4a]">
+              <div className="mt-3 flex items-start gap-2 text-[12px] text-[#2a2a2a]">
                 <Check className="w-3.5 h-3.5 text-[#ef4d2b] mt-0.5 flex-shrink-0" />
                 <span className="italic">{t.result}</span>
               </div>
@@ -463,7 +463,7 @@ function TestimonialsGrid() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="mt-10 text-center text-[#4a4a4a]">
+          <div className="mt-10 text-center text-[#2a2a2a]">
             No stories yet under this category — but we have many to share. Please reach out.
           </div>
         )}
@@ -485,7 +485,7 @@ function Spotlights() {
       icon: Building2,
       tag: "Builder",
       title: "Devraj's three towers",
-      body: "Three residential towers planned with Maha Vastu's land-energy method. Possession bookings closed faster than any of the firm's previous projects in the same micro-market.",
+      body: "Three residential towers planned with Shrisat Astro Vastu's land-energy method. Possession bookings closed faster than any of the firm's previous projects in the same micro-market.",
       stat: "Bookings closed faster",
     },
     {
@@ -504,7 +504,7 @@ function Spotlights() {
         <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
           A closer look at three transformations.
         </h2>
-        <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
+        <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
           Names and details shared with permission. Outcomes are honest reflections of what our clients
           measured for themselves — not promises we make to you.
         </p>
@@ -528,7 +528,7 @@ function Spotlights() {
                 </span>
               </div>
               <h3 className="mt-6 font-heading text-xl md:text-2xl font-medium text-[#1a1a1a]">{s.title}</h3>
-              <p className="mt-3 text-[#4a4a4a] leading-relaxed text-[15px]">{s.body}</p>
+              <p className="mt-3 text-[#2a2a2a] leading-relaxed text-lg">{s.body}</p>
               <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ef4d2b]">
                 <Check className="w-4 h-4" />
                 {s.stat}
@@ -580,7 +580,7 @@ function Carousel() {
               </div>
               <div className="text-left">
                 <div className="font-heading text-base font-medium text-[#1a1a1a]">{t.name}</div>
-                <div className="text-xs text-[#4a4a4a]">{t.role} · {t.location}</div>
+                <div className="text-sm text-[#2a2a2a]">{t.role} · {t.location}</div>
               </div>
             </div>
             <div className="mt-4">
@@ -639,7 +639,7 @@ function CTA() {
           <h2 className="font-heading mt-5 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a] leading-tight">
             The next testimonial on this page <span className="mv-gradient-text font-medium">could be yours</span>.
           </h2>
-          <p className="mt-5 text-lg text-[#4a4a4a] leading-relaxed">
+          <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
             Book a free 15-minute clarity call. If we cannot help, we will tell you so honestly — and point
             you to someone who can.
           </p>
@@ -681,3 +681,4 @@ export default function Testimonials() {
     </main>
   );
 }
+

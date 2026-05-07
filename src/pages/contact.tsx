@@ -128,8 +128,8 @@ function ContactHero() {
           <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
             Let's understand your <span className="mv-gradient-text font-medium">situation</span> first.
           </h1>
-          <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed max-w-2xl">
-            Share a few details about your home, your kundali, or the question on your mind. A Maha Vastu
+          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-2xl">
+            Share a few details about your home, your kundali, or the question on your mind. A Shrisat Astro Vastu
             advisor reviews every request personally and responds within 24 hours with a suggested next step
             — completely free.
           </p>
@@ -142,7 +142,7 @@ function ContactHero() {
             </Button>
             <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10">
               <a
-                href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`}
+                href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
                 target="_blank" rel="noreferrer"
                 data-testid="contact-hero-whatsapp"
               >
@@ -188,7 +188,7 @@ function ChannelCards() {
       label: "WhatsApp",
       title: "Chat with us",
       sub: "Fastest reply, usually within an hour",
-      href: `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`,
+      href: `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`,
       color: "#25D366",
       bg: "rgba(37, 211, 102, 0.12)",
       external: true,
@@ -240,7 +240,7 @@ function ChannelCards() {
               {c.label}
             </div>
             <div className="font-heading text-lg font-medium text-[#1a1a1a] mt-1 break-words">{c.title}</div>
-            <div className="text-sm text-[#4a4a4a] mt-1">{c.sub}</div>
+            <div className="text-sm text-[#2a2a2a] mt-1">{c.sub}</div>
             <div className="mt-4 inline-flex items-center text-sm font-semibold text-[#ef4d2b] opacity-0 group-hover:opacity-100 transition-opacity">
               Open <ChevronRight className="w-3.5 h-3.5 ml-1" />
             </div>
@@ -288,7 +288,7 @@ function ContactForm() {
             <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               Tell us about your home, your kundali, or your question.
             </h2>
-            <p className="mt-5 text-[#4a4a4a] leading-relaxed">
+            <p className="mt-5 text-[#2a2a2a] leading-relaxed">
               The more context you share, the more precise our first reply will be. All details stay private
               and are used only to prepare your consultation.
             </p>
@@ -305,7 +305,7 @@ function ContactForm() {
                   </div>
                   <div>
                     <div className="font-heading text-base font-medium text-[#1a1a1a]">{it.title}</div>
-                    <div className="text-sm text-[#4a4a4a] mt-0.5 leading-relaxed">{it.body}</div>
+                    <div className="text-sm text-[#2a2a2a] mt-0.5 leading-relaxed">{it.body}</div>
                   </div>
                 </div>
               ))}
@@ -322,7 +322,7 @@ function ContactForm() {
                 <h3 className="mt-6 font-heading text-2xl md:text-3xl font-medium text-[#1a1a1a]">
                   Request received.
                 </h3>
-                <p className="mt-3 text-[#4a4a4a] leading-relaxed max-w-md mx-auto">
+                <p className="mt-3 text-[#2a2a2a] leading-relaxed max-w-md mx-auto">
                   Our team will reach out to <span className="text-[#1a1a1a] font-medium">{form.email}</span>{" "}
                   within 24 hours. Check your email and WhatsApp for the intake form and next steps.
                 </p>
@@ -429,7 +429,7 @@ function ContactForm() {
 
                 <Field label="Upload house / plot plan" hint="Optional · PDF, JPG or PNG">
                   <label className="form-input flex items-center justify-between cursor-pointer hover:border-[#ef4d2b]">
-                    <span className="text-[#4a4a4a] truncate">
+                    <span className="text-[#2a2a2a] truncate">
                       {form.fileName || "Choose file..."}
                     </span>
                     <Upload className="w-4 h-4 text-[#ef4d2b] flex-shrink-0" />
@@ -463,7 +463,7 @@ function ContactForm() {
                 )}
 
                 <div className="md:col-span-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2 border-t border-[#f0e6d2]">
-                  <p className="text-xs text-[#4a4a4a] max-w-md">
+                  <p className="text-xs text-[#2a2a2a] max-w-md">
                     By submitting, you agree we may contact you by phone, email or WhatsApp regarding your
                     consultation. Your details remain private.
                   </p>
@@ -521,12 +521,12 @@ function Field({
 }) {
   return (
     <div>
-      <label className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-[#4a4a4a] font-semibold">
+      <label className="flex items-center justify-between text-sm uppercase tracking-[0.22em] text-[#2a2a2a] font-semibold">
         <span>
           {label}
           {required && <span className="text-[#ef4d2b] ml-1">*</span>}
         </span>
-        {hint && <span className="normal-case tracking-normal text-[10px] text-[#4a4a4a]/70">{hint}</span>}
+        {hint && <span className="normal-case tracking-normal text-xs text-[#2a2a2a]/70">{hint}</span>}
       </label>
       <div className="mt-2">{children}</div>
     </div>
@@ -541,7 +541,7 @@ function MapAndHours() {
           <div className="absolute -inset-3 bg-gradient-to-br from-[#f6d46b]/25 to-[#ef4d2b]/15 rounded-3xl blur-2xl" />
           <div className="relative rounded-3xl overflow-hidden border border-[#f0e6d2] shadow-sm h-[420px] md:h-[480px]">
             <iframe
-              title="Maha Vastu studio location"
+              title="Shrisat Astro Vastu studio location"
               src={`https://www.google.com/maps?q=${encodeURIComponent(BRAND.mapsQuery)}&output=embed`}
               className="w-full h-full"
               loading="lazy"
@@ -551,7 +551,7 @@ function MapAndHours() {
 
         <div className="lg:col-span-5 flex flex-col gap-5">
           <div className="bg-white border border-[#f0e6d2] rounded-2xl p-6">
-            <div className="text-xs uppercase tracking-[0.22em] text-[#ef4d2b] font-bold">Studio address</div>
+            <div className="text-sm uppercase tracking-[0.22em] text-[#ef4d2b] font-bold">Studio address</div>
             <div className="font-heading text-xl font-medium text-[#1a1a1a] mt-2 leading-snug">
               {BRAND.address}
             </div>
@@ -566,26 +566,26 @@ function MapAndHours() {
           </div>
 
           <div className="bg-white border border-[#f0e6d2] rounded-2xl p-6">
-            <div className="text-xs uppercase tracking-[0.22em] text-[#ef4d2b] font-bold">Consulting hours</div>
-            <ul className="mt-3 divide-y divide-[#f9f1de] text-[15px] text-[#1a1a1a]">
+            <div className="text-sm uppercase tracking-[0.22em] text-[#ef4d2b] font-bold">Consulting hours</div>
+            <ul className="mt-3 divide-y divide-[#f9f1de] text-lg text-[#1a1a1a]">
               <li className="flex justify-between py-2">
                 <span>Monday – Friday</span>
-                <span className="text-[#4a4a4a]">10:00 am – 7:00 pm</span>
+                <span className="text-[#2a2a2a]">10:00 am – 7:00 pm</span>
               </li>
               <li className="flex justify-between py-2">
                 <span>Saturday</span>
-                <span className="text-[#4a4a4a]">10:00 am – 5:00 pm</span>
+                <span className="text-[#2a2a2a]">10:00 am – 5:00 pm</span>
               </li>
               <li className="flex justify-between py-2">
                 <span>Sunday</span>
-                <span className="text-[#4a4a4a]">By appointment</span>
+                <span className="text-[#2a2a2a]">By appointment</span>
               </li>
             </ul>
-            <div className="mt-4 text-xs text-[#4a4a4a]">All consultations by prior appointment only.</div>
+            <div className="mt-4 text-sm text-[#2a2a2a]">All consultations by prior appointment only.</div>
           </div>
 
           <a
-            href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Maha Vastu, I'd like to book a consultation.")}`}
+            href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
             target="_blank" rel="noreferrer"
             className="bg-gradient-to-br from-[#25D366]/10 to-white border border-[#25D366]/30 rounded-2xl p-6 hover:shadow-md transition-shadow flex items-center gap-4"
             data-testid="whatsapp-quick"
@@ -595,7 +595,7 @@ function MapAndHours() {
             </div>
             <div className="flex-1">
               <div className="font-heading text-base font-medium text-[#1a1a1a]">Prefer to chat?</div>
-              <div className="text-sm text-[#4a4a4a]">Message us on WhatsApp anytime — usually replied within an hour.</div>
+              <div className="text-sm text-[#2a2a2a]">Message us on WhatsApp anytime — usually replied within an hour.</div>
             </div>
             <ChevronRight className="w-4 h-4 text-[#25D366] flex-shrink-0" />
           </a>
@@ -620,7 +620,7 @@ const FAQS = [
   },
   {
     q: "Will I be asked to perform expensive rituals?",
-    a: "Never. Maha Vastu's promise is simple, low-cost, non-destructive remedies. If something genuinely needs a ritual, we explain why before recommending it.",
+    a: "Never. Shrisat Astro Vastu's promise is simple, low-cost, non-destructive remedies. If something genuinely needs a ritual, we explain why before recommending it.",
   },
 ];
 
@@ -634,7 +634,7 @@ function FAQ() {
           <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Quick answers to the things people usually ask first.
           </h2>
-          <p className="mt-5 text-[#4a4a4a] leading-relaxed">
+          <p className="mt-5 text-[#2a2a2a] leading-relaxed">
             Don't see your question? Drop it in the form above or message us on WhatsApp — we'd rather you ask
             than wonder.
           </p>
@@ -660,7 +660,7 @@ function FAQ() {
                   />
                 </button>
                 {open && (
-                  <div className="px-6 pb-6 text-[#4a4a4a] leading-relaxed">{f.a}</div>
+                  <div className="px-6 pb-6 text-[#2a2a2a] leading-relaxed">{f.a}</div>
                 )}
               </div>
             );
@@ -690,3 +690,4 @@ export default function Contact() {
     </main>
   );
 }
+

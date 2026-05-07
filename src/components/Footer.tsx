@@ -1,21 +1,24 @@
 import { Link } from "wouter";
-import { Sparkles, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { BRAND, SERVICES } from "@/pages/home";
+import logoImg from "@/assets/attached_assets/logo.png";
 
 export function Footer() {
   return (
     <footer className="bg-[#faf9f6] border-t border-[#f0e6d2] mt-20">
       <div className="section-container py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-1">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 rounded-full mv-gradient flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <div className="font-heading text-xl font-semibold">
+          <div className="flex flex-col items-start">
+            <img
+              src={logoImg}
+              alt="Shrisat Astro Vastu logo"
+              className="w-20 h-20 rounded-full object-contain"
+            />
+            <div className="font-heading text-xl font-semibold mt-3">
               {BRAND.name}
             </div>
           </div>
-          <p className="mt-4 text-sm text-[#4a4a4a] leading-relaxed">
+          <p className="mt-4 text-sm text-[#2a2a2a] leading-relaxed">
             Scientific spiritual consulting. Practical remedies for your home,
             career, and energy — grounded in Vastu and Astrology.
           </p>
@@ -84,7 +87,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-[#f0e6d2]">
-        <div className="section-container py-6 text-center text-xs text-[#4a4a4a]">
+        <div className="section-container py-6 text-center text-sm text-[#2a2a2a]">
           © {new Date().getFullYear()} {BRAND.name}. All rights reserved.
           Designed by{" "}
           <a
@@ -100,3 +103,4 @@ export function Footer() {
     </footer>
   );
 }
+

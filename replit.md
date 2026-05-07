@@ -1,4 +1,4 @@
-# Maha Vastu — Astrology & Vastu Science
+# Shrisat Astro Vastu — Astrology & Vastu Science
 
 ## Overview
 
