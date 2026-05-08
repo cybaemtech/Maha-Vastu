@@ -350,7 +350,7 @@ function StatsBar() {
 function FeaturedQuote() {
   const featured = ALL_TESTIMONIALS[0];
   return (
-    <section className="section-container py-20 md:py-24">
+    <section className="section-container py-20 md:py-28">
       <div className="relative rounded-3xl overflow-hidden border border-[#f6d46b] bg-gradient-to-br from-[#fff5eb] via-white to-[#fffaf0] p-10 md:p-16">
         <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#f6d46b]/30 blur-3xl" />
         <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#ef4d2b]/15 blur-3xl" />
@@ -391,7 +391,7 @@ function TestimonialsGrid() {
   return (
     <section id="all-stories" className="bg-[#faf9f6] border-y border-[#f0e6d2]">
       <div className="section-container py-20 md:py-28">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">All stories</div>
             <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
@@ -563,7 +563,7 @@ function Carousel() {
   return (
     <section className="bg-gradient-to-b from-white via-[#fff5eb]/30 to-white border-y border-[#f0e6d2]">
       <div className="section-container py-20 md:py-28">
-        <div className="max-w-2xl mx-auto text-center mb-10">
+        <div className="max-w-2xl mx-auto text-center mb-12">
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">In their own words</div>
           <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Listen to a single voice at a time.

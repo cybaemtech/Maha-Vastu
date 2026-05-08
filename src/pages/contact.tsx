@@ -218,7 +218,7 @@ function ChannelCards() {
   ];
 
   return (
-    <section className="section-container py-14 md:py-20">
+    <section className="section-container py-16 md:py-20">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
         {channels.map((c, i) => (
           <a

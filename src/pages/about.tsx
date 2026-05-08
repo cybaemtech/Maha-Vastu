@@ -203,8 +203,8 @@ function FounderJourney() {
   return (
     <section>
       {/* Mentor card */}
-      <div className="section-container py-16 md:py-20">
-        <div className="text-center mb-10">
+      <div className="section-container py-20 md:py-28">
+        <div className="text-center mb-12">
           <h2 className="font-heading text-2xl md:text-4xl font-semibold text-[#1a1a1a]">
             Guided by a Visionary Mentor
           </h2>
@@ -612,7 +612,7 @@ function Promise() {
               That is the only promise we make. Eighteen years of practice has taught us that honesty,
               applied to ancient sciences, is the most powerful remedy of all.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-col sm:flex-row gap-3">
               <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
                 <a href="/#contact" data-testid="about-promise-cta">
                   Book a free clarity call
