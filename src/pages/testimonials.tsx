@@ -219,7 +219,7 @@ function TestimonialsHeroBackdrop() {
 
 function TestimonialsHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white pt-32 md:pt-36 pb-20 md:pb-28">
       <TestimonialsHeroBackdrop />
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <svg viewBox="0 0 1200 700" className="w-full h-full" preserveAspectRatio="xMidYMid slice">
@@ -282,32 +282,37 @@ function TestimonialsHero() {
         </svg>
       </div>
 
-      <div className="relative section-container py-20 md:py-28">
+      <div className="relative section-container">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-xs font-semibold uppercase tracking-[0.2em] text-[#ef4d2b]">
             <Star className="w-3.5 h-3.5 fill-[#f6b400] text-[#f6b400]" />
             Stories from our clients
           </div>
-          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
+          <h1 className="font-heading mt-6 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
             Real homes. Real charts. <span className="mv-gradient-text font-medium">Real change.</span>
           </h1>
-          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] leading-relaxed max-w-2xl">
             For nearly two decades, families, builders and businesses have trusted Shrisat Astro Vastu with the most
             personal corners of their lives. Here are some of the stories — in their own words.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
+          <div className="mt-9 flex flex-col sm:flex-row gap-3">
+            <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
               <Link href="/contact" data-testid="testi-hero-cta">
                 Start your story
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+            <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
               <a href={`tel:${BRAND.phoneTel}`}>
                 <Phone className="mr-2 w-4 h-4" />
                 <span className="phone-num">{BRAND.phone}</span>
               </a>
             </Button>
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-[#2a2a2a]">
+            <div className="flex items-center gap-2"><Star className="w-4 h-4 fill-[#f6d46b] text-[#f6d46b]" /> 4.9 / 5 client rating</div>
+            <div className="flex items-center gap-2"><Users className="w-4 h-4 text-[#ef4d2b]" /> 3,500+ clients guided</div>
+            <div className="flex items-center gap-2"><HeartHandshake className="w-4 h-4 text-[#ef4d2b]" /> 92% repeat or referred</div>
           </div>
         </div>
       </div>
@@ -352,7 +357,7 @@ function FeaturedQuote() {
 
         <div className="relative max-w-4xl mx-auto text-center">
           <Quote className="w-14 h-14 mx-auto text-[#ef4d2b] opacity-30" />
-          <blockquote className="font-heading mt-6 text-2xl md:text-4xl lg:text-5xl font-light tracking-tight text-[#1a1a1a] leading-snug">
+          <blockquote className="font-heading mt-6 text-2xl md:text-3xl lg:text-4xl font-light tracking-tight text-[#1a1a1a] leading-snug">
             "{featured.quote}"
           </blockquote>
           <div className="mt-8 flex items-center justify-center gap-4">
@@ -389,7 +394,7 @@ function TestimonialsGrid() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
           <div className="max-w-2xl">
             <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">All stories</div>
-            <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+            <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               Filter by what matters to you.
             </h2>
           </div>
@@ -501,7 +506,7 @@ function Spotlights() {
     <section className="section-container py-20 md:py-28">
       <div className="max-w-2xl">
         <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">Spotlights</div>
-        <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+        <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
           A closer look at three transformations.
         </h2>
         <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -560,7 +565,7 @@ function Carousel() {
       <div className="section-container py-20 md:py-28">
         <div className="max-w-2xl mx-auto text-center mb-10">
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">In their own words</div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Listen to a single voice at a time.
           </h2>
         </div>
@@ -636,7 +641,7 @@ function CTA() {
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
             Add your story
           </div>
-          <h2 className="font-heading mt-5 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a] leading-tight">
+          <h2 className="font-heading mt-5 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a] leading-tight">
             The next testimonial on this page <span className="mv-gradient-text font-medium">could be yours</span>.
           </h2>
           <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -644,13 +649,13 @@ function CTA() {
             you to someone who can.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
+            <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
               <Link href="/contact" data-testid="testi-cta-book">
                 Book a Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+            <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
               <Link href="/services">Explore our services</Link>
             </Button>
           </div>

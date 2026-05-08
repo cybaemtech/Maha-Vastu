@@ -35,7 +35,7 @@ const LOTUS_IMG =
 
 function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white pt-32 md:pt-36 pb-20 md:pb-28">
       {/* Spiritual divine Indian background image (behind animation) */}
       <div
         className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-75"
@@ -117,27 +117,26 @@ function AboutHero() {
         </svg>
       </div>
 
-      <div className="relative section-container py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div className="relative section-container grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-xs font-semibold uppercase tracking-[0.2em] text-[#ef4d2b]">
             <Sparkles className="w-3.5 h-3.5" />
             About Shrisat Astro Vastu
           </div>
-          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
+          <h1 className="font-heading mt-6 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
             Our Guidance. <span className="mv-gradient-text font-medium">Our Foundation.</span>
           </h1>
-          <div className="mt-3 w-16 h-0.5 bg-[#ef4d2b] rounded-full" />
-          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-md">
+          <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] leading-relaxed max-w-2xl">
             Our knowledge is rooted in ancient wisdom and refined through the blessings of our Guru.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
+          <div className="mt-9 flex flex-col sm:flex-row gap-3">
+            <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
               <a href="/#contact" data-testid="about-hero-cta-book">
                 Book a Consultation
                 <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
-            <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+            <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
               <a href={`tel:${BRAND.phone}`}>
                 <Phone className="mr-2 w-4 h-4" />
                 <span className="phone-num">{BRAND.phone}</span>
@@ -342,7 +341,7 @@ function Pillars() {
       <div className="section-container py-20 md:py-28">
         <div className="max-w-2xl">
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">What we believe</div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Four pillars that shape every consultation.
           </h2>
           <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -395,7 +394,7 @@ function Lineage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         <div className="lg:col-span-5">
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">Our lineage</div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Rooted in three sacred sciences.
           </h2>
           <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -471,7 +470,7 @@ function Timeline() {
       <div className="section-container py-20 md:py-28">
         <div className="max-w-2xl">
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">Our journey</div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Almost two decades, one steady practice.
           </h2>
         </div>
@@ -572,7 +571,7 @@ function Practice() {
           </div>
           <div className="lg:col-span-7">
             <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">How we practice</div>
-            <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+            <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               The little things that make every consultation different.
             </h2>
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -605,7 +604,7 @@ function Promise() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
               Our promise
             </div>
-            <h2 className="font-heading mt-5 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a] leading-tight">
+            <h2 className="font-heading mt-5 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a] leading-tight">
               "If we cannot improve your home, your kundali, or your peace —
               <span className="mv-gradient-text font-medium"> we will tell you so honestly</span>."
             </h2>
@@ -614,13 +613,13 @@ function Promise() {
               applied to ancient sciences, is the most powerful remedy of all.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
+              <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
                 <a href="/#contact" data-testid="about-promise-cta">
                   Book a free clarity call
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+              <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
                 <Link href="/services">Explore our services</Link>
               </Button>
             </div>

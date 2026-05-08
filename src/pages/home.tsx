@@ -25,6 +25,9 @@ import {
   Building2,
   Briefcase,
   ChevronUp,
+  Hash,
+  Home as HomeIcon,
+  Map,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
@@ -256,7 +259,8 @@ export function Nav() {
   };
 
   const desktopLinkClass = (active: boolean) =>
-    `relative text-base font-bold py-2 transition-colors ${active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
+    `relative text-base font-bold py-2 transition-colors ${
+      active ? "text-[#ef4d2b]" : "text-[#1a1a1a] hover:text-[#ef4d2b]"
     }`;
 
   const ActiveUnderline = ({ show }: { show: boolean }) =>
@@ -316,52 +320,68 @@ export function Nav() {
             </Link>
 
             <div
-              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[340px] transition-all duration-150 ${servicesOpen
+              className={`absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[580px] transition-all duration-150 ${
+                servicesOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 -translate-y-1 pointer-events-none"
-                }`}
+              }`}
               onMouseEnter={openDropdown}
               onMouseLeave={scheduleClose}
             >
-              <div className="bg-white border border-[#f0e6d2] rounded-2xl shadow-lg overflow-hidden">
-                {SERVICES.map((s) => {
-                  return (
+              {(() => {
+                const serviceIcons: Record<string, React.ReactNode> = {
+                  vastu:       <HomeIcon  className="w-4 h-4 text-white" />,
+                  astrology:   <Star      className="w-4 h-4 text-white" />,
+                  "astro-vastu": <Sparkles className="w-4 h-4 text-white" />,
+                  land:        <Map       className="w-4 h-4 text-white" />,
+                  aura:        <Sun       className="w-4 h-4 text-white" />,
+                  business:    <Briefcase className="w-4 h-4 text-white" />,
+                  numerology:  <Hash      className="w-4 h-4 text-white" />,
+                };
+                return (
+                  <div className="bg-white border border-[#f0e6d2] rounded-2xl shadow-xl overflow-hidden">
+                    <div className="grid grid-cols-2 divide-x divide-[#f0e6d2]">
+                      {SERVICES.map((s, i) => (
+                        <Link
+                          key={s.title}
+                          href={`/services#${s.id}`}
+                          onClick={() => setServicesOpen(false)}
+                          className={`flex items-start gap-3 px-4 py-3.5 hover:bg-[#fff5eb] transition-colors border-b border-[#f9f1de] ${
+                            i >= SERVICES.length - (SERVICES.length % 2 === 0 ? 2 : 1) ? "border-b-0" : ""
+                          }`}
+                          data-testid={`nav-service-${s.id}`}
+                        >
+                          <div className="w-9 h-9 rounded-full bg-[#ef4d2b] flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                            {serviceIcons[s.id] ?? <Sparkles className="w-4 h-4 text-white" />}
+                          </div>
+                          <div className="min-w-0">
+                            <div className="text-sm font-semibold text-[#1a1a1a] flex items-center gap-1.5 flex-wrap">
+                              {s.title}
+                              {s.flagship && (
+                                <span className="text-[9px] uppercase tracking-wider font-bold text-[#ef4d2b] bg-[#fff5eb] px-1.5 py-0.5 rounded">
+                                  Flagship
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-xs text-[#6b6b6b] mt-0.5 leading-snug">
+                              {s.tag}
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                     <Link
-                      key={s.title}
-                      href={`/services#${s.id}`}
+                      href="/services"
                       onClick={() => setServicesOpen(false)}
-                      className="flex items-start gap-3 px-4 py-3 hover:bg-[#fff5eb] transition-colors border-b border-[#f9f1de] last:border-b-0"
-                      data-testid={`nav-service-${s.id}`}
+                      className="flex items-center justify-between px-5 py-3 bg-[#faf9f6] hover:bg-[#fff5eb] transition-colors text-sm font-semibold text-[#ef4d2b] border-t border-[#f0e6d2]"
+                      data-testid="nav-services-view-all"
                     >
-                      <div className="w-9 h-9 rounded-full mv-gradient flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Sparkles className="w-4 h-4 text-white" />
-                      </div>
-                      <div>
-                        <div className="text-sm font-semibold text-[#1a1a1a] flex items-center gap-2">
-                          {s.title}
-                          {s.flagship && (
-                            <span className="text-[9px] uppercase tracking-wider font-bold text-[#ef4d2b] bg-[#fff5eb] px-1.5 py-0.5 rounded">
-                              Flagship
-                            </span>
-                          )}
-                        </div>
-                        <div className="text-xs text-[#2a2a2a] mt-0.5">
-                          {s.tag}
-                        </div>
-                      </div>
+                      View all services
+                      <ChevronRight className="w-4 h-4" />
                     </Link>
-                  );
-                })}
-                <Link
-                  href="/services"
-                  onClick={() => setServicesOpen(false)}
-                  className="flex items-center justify-between px-4 py-3 bg-[#faf9f6] hover:bg-[#fff5eb] transition-colors text-sm font-medium text-[#ef4d2b]"
-                  data-testid="nav-services-view-all"
-                >
-                  View all services
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
+                  </div>
+                );
+              })()}
             </div>
           </div>
 
@@ -754,7 +774,7 @@ function Hero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 text-xs font-semibold uppercase tracking-[0.2em] text-[#ef4d2b]">
             <Sun className="w-3.5 h-3.5" /> Scientific Spiritual Consulting
           </div>
-          <h1 className="font-heading mt-6 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light tracking-tight text-[#1a1a1a]">
+          <h1 className="font-heading mt-6 text-3xl sm:text-4xl lg:text-5xl leading-[1.05] font-light tracking-tight text-[#1a1a1a]">
             Where your stars meet{" "}
             <span className="mv-gradient-text font-medium">your space.</span>
           </h1>
@@ -833,7 +853,7 @@ function Services() {
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
             What we do
           </div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Seven services, one integrated practice.
           </h2>
         </div>
@@ -901,7 +921,7 @@ function HowItWorks() {
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
             How it works
           </div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             A clear path from first conversation to real transformation.
           </h2>
           <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -945,7 +965,7 @@ function About() {
         <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
           About Shrisat Astro Vastu
         </div>
-        <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+        <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
           A modern consulting practice rooted in tradition.
         </h2>
         <p className="mt-5 text-[#2a2a2a] text-lg leading-relaxed">
@@ -1017,7 +1037,7 @@ function Philosophy() {
           <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
             Our philosophy
           </div>
-          <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+          <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
             Four principles we refuse to compromise on.
           </h2>
           <p className="mt-5 text-lg text-[#2a2a2a] leading-relaxed">
@@ -1057,7 +1077,7 @@ function Signs() {
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
               When to consult
             </div>
-            <h2 className="font-heading mt-5 text-3xl md:text-4xl lg:text-5xl font-light tracking-tight text-[#1a1a1a]">
+            <h2 className="font-heading mt-5 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               Signs it's time to call us.
             </h2>
             <p className="mt-4 text-[#2a2a2a] leading-relaxed">
@@ -1112,7 +1132,7 @@ function Testimonials() {
             <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
               Voices of transformation
             </div>
-            <h2 className="font-heading mt-3 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a]">
+            <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a]">
               Real outcomes, in their own words.
             </h2>
           </div>
@@ -1222,7 +1242,7 @@ function Contact() {
         <div className="text-sm uppercase tracking-[0.2em] text-[#ef4d2b] font-semibold">
           Begin your consultation
         </div>
-        <h2 className="font-heading mt-3 text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-[#1a1a1a] max-w-4xl">
+        <h2 className="font-heading mt-3 text-3xl md:text-4xl font-light tracking-tight text-[#1a1a1a] max-w-4xl">
           Let's understand your situation first.
         </h2>
         <p className="mt-5 text-lg text-[#2a2a2a] max-w-2xl">
@@ -1458,8 +1478,9 @@ export function FloatingWhatsApp() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         data-testid="scroll-to-top-btn"
         aria-label="Scroll to top"
-        className={`w-11 h-11 rounded-full bg-[#c8a96e] text-white flex items-center justify-center shadow-md hover:bg-[#b8955a] hover:scale-105 transition-all duration-300 ${showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-          }`}
+        className={`w-11 h-11 rounded-full bg-[#c8a96e] text-white flex items-center justify-center shadow-md hover:bg-[#b8955a] hover:scale-105 transition-all duration-300 ${
+          showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
       >
         <ChevronUp className="w-5 h-5" />
       </button>

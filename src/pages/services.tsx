@@ -324,7 +324,7 @@ function ServicesHero() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 text-xs font-semibold uppercase tracking-[0.2em] text-[#ef4d2b]">
             <Sparkles className="w-3.5 h-3.5" /> Our Services
           </div>
-          <h1 className="font-heading mt-6 text-4xl sm:text-5xl lg:text-6xl leading-[1.05] font-light tracking-tight text-[#1a1a1a]">
+          <h1 className="font-heading mt-6 text-3xl sm:text-4xl lg:text-5xl leading-[1.05] font-light tracking-tight text-[#1a1a1a]">
             A complete <span className="mv-gradient-text font-medium">consulting practice</span> — astrology, Vastu, and energy science.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] max-w-2xl leading-relaxed">

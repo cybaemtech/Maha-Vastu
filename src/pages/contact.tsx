@@ -39,7 +39,7 @@ const PROPERTY_OPTIONS = [
 
 function ContactHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#fff5eb] via-[#fffaf0] to-white pt-32 md:pt-36 pb-20 md:pb-28">
       {/* Spiritual divine background image (behind animation) */}
       <div
         className="absolute inset-0 pointer-events-none bg-cover bg-center opacity-70"
@@ -119,28 +119,28 @@ function ContactHero() {
         </svg>
       </div>
 
-      <div className="relative section-container py-20 md:py-28">
+      <div className="relative section-container">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ef4d2b]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f6d46b] bg-white/80 backdrop-blur text-xs font-semibold uppercase tracking-[0.2em] text-[#ef4d2b]">
             <Sparkles className="w-3.5 h-3.5" />
             Begin your consultation
           </div>
-          <h1 className="font-heading mt-5 text-4xl md:text-6xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
+          <h1 className="font-heading mt-6 text-3xl md:text-5xl font-light tracking-tight text-[#1a1a1a] leading-[1.05]">
             Let's understand your <span className="mv-gradient-text font-medium">situation</span> first.
           </h1>
-          <p className="mt-6 text-lg text-[#2a2a2a] leading-relaxed max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-[#2a2a2a] leading-relaxed max-w-2xl">
             Share a few details about your home, your kundali, or the question on your mind. A Shrisat Astro Vastu
             advisor reviews every request personally and responds within 24 hours with a suggested next step
             — completely free.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button asChild className="mv-gradient text-white rounded-full px-7 py-6 text-base">
+          <div className="mt-9 flex flex-col sm:flex-row gap-3">
+            <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
               <a href={`tel:${BRAND.phoneTel}`} data-testid="contact-hero-call">
                 <Phone className="mr-2 w-4 h-4" />
                 Call <span className="phone-num">{BRAND.phone}</span>
               </a>
             </Button>
-            <Button asChild variant="outline" className="rounded-full px-7 py-6 text-base border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10">
+            <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10">
               <a
                 href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent("Hello Shrisat Astro Vastu, I'd like to book a consultation.")}`}
                 target="_blank" rel="noreferrer"
@@ -327,7 +327,7 @@ function ContactForm() {
                   within 24 hours. Check your email and WhatsApp for the intake form and next steps.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-3">
-                  <Button asChild className="mv-gradient text-white rounded-full px-6">
+                  <Button asChild className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md">
                     <a
                       href={`https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(`Hello, I just submitted the form. My name is ${form.name}.`)}`}
                       target="_blank" rel="noreferrer"
@@ -336,7 +336,7 @@ function ContactForm() {
                       Continue on WhatsApp
                     </a>
                   </Button>
-                  <Button asChild variant="outline" className="rounded-full px-6 border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
+                  <Button asChild variant="outline" className="rounded-full px-7 h-12 text-base border-[#ef4d2b] text-[#ef4d2b] hover:bg-[#fff5eb]">
                     <Link href="/services">Explore our services</Link>
                   </Button>
                 </div>
@@ -469,7 +469,7 @@ function ContactForm() {
                   </p>
                   <Button
                     type="submit"
-                    className="mv-gradient text-white rounded-full px-7 py-6 text-base whitespace-nowrap"
+                    className="mv-gradient text-white hover:opacity-90 rounded-full px-7 h-12 text-base shadow-md whitespace-nowrap"
                     data-testid="form-submit"
                   >
                     Get personalized solution
