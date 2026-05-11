@@ -208,15 +208,7 @@ const SIGNS = [
   "Relationship or marriage compatibility doubts",
 ];
 
-function slugFor(title: string) {
-  const t = title.toLowerCase();
-  if (t.includes("astro vastu")) return "astro-vastu";
-  if (t.includes("astrology")) return "astrology";
-  if (t.includes("land")) return "land";
-  if (t.includes("aura")) return "aura";
-  if (t.includes("business")) return "business";
-  return "vastu";
-}
+
 
 export function Nav() {
   const [open, setOpen] = useState(false);
@@ -256,6 +248,18 @@ export function Nav() {
     if (href === "/services")
       return location === "/services" || location.startsWith("/services");
     return location === href;
+  };
+
+  const handleHashClick = (id: string) => {
+    if (window.location.pathname.startsWith("/services")) {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY - 100;
+          window.scrollTo({ top, behavior: "smooth" });
+        }
+      }, 50);
+    }
   };
 
   const desktopLinkClass = (active: boolean) =>
@@ -345,7 +349,10 @@ export function Nav() {
                         <Link
                           key={s.title}
                           href={`/services#${s.id}`}
-                          onClick={() => setServicesOpen(false)}
+                          onClick={() => {
+                            setServicesOpen(false);
+                            handleHashClick(s.id);
+                          }}
                           className={`flex items-start gap-3 px-4 py-3.5 hover:bg-[#fff5eb] transition-colors border-b border-[#f9f1de] ${
                             i >= SERVICES.length - (SERVICES.length % 2 === 0 ? 2 : 1) ? "border-b-0" : ""
                           }`}
@@ -460,14 +467,14 @@ export function Nav() {
             {mobileServicesOpen && (
               <div className="pl-5 border-l-2 border-[#f6d46b] flex flex-col gap-2 mb-2 ml-2">
                 {SERVICES.map((s) => {
-                  const slug = slugFor(s.title);
                   return (
                     <Link
                       key={s.title}
-                      href={`/services#${slug}`}
-                      onClick={() => {
+                      href={`/services#${s.id}`}
+                      onClick={(e) => {
                         setOpen(false);
                         setMobileServicesOpen(false);
+                        handleHashClick(s.id);
                       }}
                       className="text-sm text-[#2a2a2a] hover:text-[#ef4d2b] py-1"
                     >
